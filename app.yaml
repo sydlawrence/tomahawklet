@@ -1,4 +1,4 @@
-application: playgrub
+application: tomahawkbar
 version: 50
 runtime: python
 api_version: 1

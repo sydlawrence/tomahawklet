@@ -1,9 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<title>Playgrub</title>
-<meta name="description" content="Playgrub is an easy way to make playlists from web pages.">
-<meta name="keywords" content="playlist, playlists, music, streaming, radio, mp3, playdar, playgrub, playlick, windar">
+<title>Tomahawklet</title>
+<meta name="description" content="Tomahawklet is an easy way to extract metadata from webpages, create plalists out of it and send them into Tomahawk.">
+<meta name="keywords" content="playlist, playlists, music, streaming, radio, mp3, playdar, playgrub, playlick, windar, tomahawk">
 <meta name="google-site-verification" content="A_BV7Fs2CvI-q2I2Y2Fc0qIpXuEhgwP8WrBVJ7KnZ5Q" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -74,23 +74,24 @@ $(function() {
 </div>
 
 <div id='playgrub-main'>
-    <div id='playgrub-logo'><a href='/'><img src='images/Playgrub_logo.png' /></a></div>
+    <div id='playgrub-logo'><a href='/'><img src='images/tomahawklet_banner.png' /></a></div>
     <div class='playgrub-about'>
-        Playgrub is an easy way to play web pages with <span id='playdar-link'><a href='http://www.playdar.org/download'>Playdar</a></span>.
+        Tomahawklet is an easy way to extract metadata from webpages, create plalists out of it and send them into <a href="http://www.gettomahawk.com">Tomahawk</a></span>.
     </div>
     <div id='playgrub-bookmarklet-setup' class='playgrub-about'>
-        To install Playgrub drag this icon to your browser's bookmarks bar:
+        To install Tomahawklet drag this icon to your browser's bookmarks bar:
         <p />
         <div id='playgrub-icon'>
-            <a href="javascript:(function(){ host='http://www.playgrub.com/js/'; _my_script=document.createElement('SCRIPT'); _my_script.type='text/javascript'; _my_script.src=host+'playgrub_bookmarklet.js?'; document.getElementsByTagName('head')[0].appendChild(_my_script); })();" id="bookmarklet">
-            <img src='images/Playgrub_icon.png' alt='Grub' title='Grub' />
+            <a href="javascript:(function(){ host='http://tomahawkbar.appspot.com/js/'; _my_script=document.createElement('SCRIPT'); _my_script.type='text/javascript'; _my_script.src=host+'playgrub_bookmarklet.js?'; document.getElementsByTagName('head')[0].appendChild(_my_script); })();" id="bookmarklet">
+            <img src='images/tomahawk_icon_small.png' alt='Tomahawklet' title='Tomahawklet' />
             </a>
             <span id='playgrub-icon-description'><div id='playgrub-icon-description-text'>Drag to your bookmarks bar</div></span>
         </div>
-        <div id='playgrub-supported'>Use Playgrub on any of our <br /><a href='http://playgrub.posterous.com/supported-sites' target='_blank'>Suported Sites</a></div>
+        <div id='playgrub-supported'>Use Tomahawklet on any of our <br /><a href='http://gettomahawk.com/tomahawklet' target='_blank'>Suported Sites</a>.</div>
     </div>
     <div id='get-playdar'>
     <a href='http://www.playdar.org/download/' target='_blank'><img id='playdar-logo' src='images/playdar_logo-125px.jpg' /></a>
+    </div>
     </div>
 </div>
 
@@ -98,11 +99,10 @@ $(function() {
 </div>
 
 <div id='playgrub-footer' class='playgrub-about'>
-<a href='http://playgrub.posterous.com' target='_blank'>Blog</a> | 
-<a href='http://github.com/tobypadilla/playgrub' target='_blank'>GitHub</a> | 
-<a href='http://twitter.com/playgrub' target='_blank'>Twitter</a> | 
-<a href='http://www.facebook.com/pages/Playgrub/216885219105' target='_blank'>Facebook</a> | 
-<a href='/#xspf=http://www.playgrub.com/charts' target='_blank'>Charts</a>
+<a href='http://www.gettomahawk.com' target='_blank'>Get Tomahawk</a> | 
+<a href='http://twitter.com/tomahawkplayer' target='_blank'>Twitter</a> | 
+<a href='/#xspf=http://tomahawkbar.appspot.com/charts' target='_blank'>Charts</a> | 
+Concept and code liberally stolen from the awesome <a href="http://www.playgrub.com" target='_blank'>Playgrub</a> by <a href='http://github.com/tobypadilla/playgrub' target='_blank'>Toby Padilla</a>
 </div>
 
 <script type="text/javascript">

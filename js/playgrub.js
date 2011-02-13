@@ -1,5 +1,5 @@
 Playgrub = {
-    PGHOST: 'http://localhost:8080/',
+    PGHOST: 'http://tomahawkbar.appspot.com/',
     VERSION: '0.9.4',
     playlist: {},
     client: {},
@@ -382,10 +382,9 @@ Playgrub.Content = function() {
         +"</span>"
         +"</div>"
         +"<div id='playgrub-bookmarklet-links'>"
-        +"<span style='margin-right: 10px;'>More:</span>"
-        +"<span class='playgrub-clickable playgrub-link' onClick='window.open(\""+Playgrub.Util.playlick_link(Playgrub.playlist.xspf_url())+"\");'>Playlick</span>"
-        +"<span class='playgrub-clickable playgrub-link' onClick='window.open(\""+Playgrub.Util.spiffdar_link(Playgrub.playlist.xspf_url())+"\");'>Spiffdar</span>"
-        +"<span class='playgrub-clickable playgrub-link' onClick='window.open(\""+Playgrub.playlist.xspf_url()+"\");'>Download XSPF</span>"
+        +"<span style='margin-right: 10px;'>Send to:</span>"
+        +"<span class='playgrub-clickable playgrub-link' onClick='window.open(\""+Playgrub.Util.playlick_link(Playgrub.playlist.xspf_url())+"\");'>Tomahawk</span>"
+        +"<span class='playgrub-clickable playgrub-link' onClick='window.open(\""+Playgrub.playlist.xspf_url()+"\");'>or Download XSPF</span>"
         +"</div>";
     };
 
@@ -784,11 +783,11 @@ Playgrub.Util = {
     },
 
     playlick_link: function(xspf) {
-        return "http://www.playlick.com/#xspf="+xspf;
+        return "tomahawk://load/xspf="+xspf;
     },
 
     spiffdar_link: function(xspf) {
-        return "http://spiffdar.org/?spiff="+encodeURIComponent(xspf);
+        return "tomahawk://load/xspf="+encodeURIComponent(xspf);
     },
 
     playgrub_link: function(xspf) {
