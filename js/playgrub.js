@@ -677,7 +677,7 @@ Playgrub.Player.prototype = {
             onStat: function (detected) {
                 if (detected) {
                     if (!detected.authenticated) {
-                        var connect_link = Playdar.client.get_auth_link_html('Connect to Playdar');
+                        var connect_link = Playdar.client.get_auth_link_html('Connect to Tomahawk');
                         Playgrub.player.playdar_status = connect_link;
                         Playgrub.content.display_playdar_status(connect_link);
                     }
@@ -690,9 +690,9 @@ Playgrub.Player.prototype = {
 
             // Called when the browser is authorised to query Playdar.
             onAuth: function () {
-                Playgrub.player.playdar_status = Playdar.client.get_disconnect_link_html('Disconnect from Playdar');
+                Playgrub.player.playdar_status = Playdar.client.get_disconnect_link_html('Disconnect from Tomahawk');
                 if(typeof(Playgrub.content) != 'undefined')
-                    Playgrub.content.display_playdar_status(Playdar.client.get_disconnect_link_html('Disconnect from Playdar'));
+                    Playgrub.content.display_playdar_status(Playdar.client.get_disconnect_link_html('Disconnect from Tomahawk'));
                 Playgrub.player.resolve_current_playlist();
             },
 
