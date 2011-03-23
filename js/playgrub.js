@@ -384,7 +384,7 @@ Playgrub.Content = function() {
         +"<div id='playgrub-bookmarklet-links'>"
         +"<span style='margin-right: 10px;'>Send to:</span>"
         +"<span class='playgrub-clickable playgrub-link' onClick='window.open(\""+Playgrub.Util.playlick_link(Playgrub.playlist.xspf_url())+"\");'>Tomahawk</span>"
-        +"<span class='playgrub-clickable playgrub-link' onClick='window.open(\""+Playgrub.playlist.xspf_url()+"\");'>or Download XSPF</span>"
+        +"<span class='playgrub-clickable playgrub-link' onClick='window.open(\""+Playgrub.playlist.xspf_url()+"\");'>(or Download XSPF)</span>"
         +"</div>";
     };
 
