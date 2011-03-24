@@ -682,7 +682,7 @@ Playgrub.Player.prototype = {
                         Playgrub.content.display_playdar_status(connect_link);
                     }
                 } else {
-                    var playdar_not = "<a href='http://www.playdar.org/download/' target='_blank'>Playdar not available</a>";
+                    var playdar_not = "<a href='http://www.gettomahawk.com/download/' target='_blank'>Tomahawk not available</a>";
                     Playgrub.player.playdar_status = playdar_not;
                     Playgrub.content.display_playdar_status(playdar_not);
                 }
@@ -783,11 +783,11 @@ Playgrub.Util = {
     },
 
     playlick_link: function(xspf) {
-        return "tomahawk://load/xspf="+xspf;
+        return "tomahawk://load/?xspf="+xspf;
     },
 
     spiffdar_link: function(xspf) {
-        return "tomahawk://load/xspf="+encodeURIComponent(xspf);
+        return "tomahawk://load/?xspf="+encodeURIComponent(xspf);
     },
 
     playgrub_link: function(xspf) {
