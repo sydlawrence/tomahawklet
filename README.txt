@@ -13,6 +13,7 @@ Rdio
 Mog
 Fiql
 Apple
+YouTube (Disco)
 more: http://www.gettomahawk.com/ecosystem/tomahawklet
 
 Players
