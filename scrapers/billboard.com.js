@@ -32,8 +32,8 @@ Playgrub.source.scrape = function() {
 	
 		document.title += " (By '"+by+"' starting at #"+first+")"
 		$("div.units div.info").each(function () {
-			var artist = $(this).find('h2').text();
-			var title = $(this).find('h3').text();
+			var title = $(this).find('h2').text();
+			var artist = $(this).find('h3').text();
 			if( artist && title && artist != "" && title != "")
 		    	Playgrub.playlist.add_track(artist,title);
 	    });
