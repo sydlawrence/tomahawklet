@@ -9,7 +9,7 @@
  */
 
 Playgrub.source.url = 'http://widgets\.grooveshark\.com/add_songs.*';
-Playgrub.source.error = "To use Playgrub on Grooveshark export a song list, choose \"Mirror Changes\" or \"Copy Songs\", scroll down and hit \"Next Step\", then use the bookmarklet.";
+Playgrub.source.error = "To use Tomahawklet on Grooveshark export a song list, choose \"Mirror Changes\" or \"Copy Songs\", scroll down and hit \"Next Step\", then use the bookmarklet.";
 Playgrub.source.scrape = function() {
     $("h4").each(function () {
         var song_result = $(this).html().split(" - ");
