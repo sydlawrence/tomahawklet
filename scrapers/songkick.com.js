@@ -9,7 +9,7 @@
  */
 
 Playgrub.source.url = 'http://.*songkick\.com.*/.*';
-Playgrub.source.error = 'Playgrub currently supports Songkick setlists only. Please check your url.';
+Playgrub.source.error = 'Tomahawklet currently supports Songkick setlists only. Please check your url.';
 Playgrub.source.scrape = function() {
     $("div#setlists").each(function () {
         var artist = $(this).children('h3').text();
