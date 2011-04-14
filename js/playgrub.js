@@ -614,7 +614,7 @@ Playgrub.Player.prototype = {
     play_track: function() {
         if(!$(this).hasClass('playgrub-playlist-track-resolved')) {
             var keywords = $(this).text().replace(/-/g,'\+');
-            window.open('http://www.amazon.com/gp/search?ie=UTF8&keywords='+keywords+'&tag=playgrub-20&index=digital-music&linkCode=ur2&camp=1789&creative=9325');
+            window.open('http://www.amazon.com/gp/search?ie=UTF8&keywords='+keywords+'&tag=tomahawklet-20&index=digital-music&linkCode=ur2&camp=1789&creative=9325');
             return false;
         }
         // toggle play button
