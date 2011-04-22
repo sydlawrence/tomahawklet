@@ -8,7 +8,7 @@
  * This scraper will work on any Last.fm song page and only add unique songs.
  */
 
-Playgrub.source.url = 'http://.*lastfm.*.*';
+Playgrub.source.url = 'http://.*lastfm.it.*';
 Playgrub.source.error = "Check your Last.fm url";
 Playgrub.source.scrape = function() {
     // lots of duplicate song links, so use this to only add songs once
