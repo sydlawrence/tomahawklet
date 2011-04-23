@@ -9,7 +9,7 @@
  */
 
 Playgrub.source.url = 'http://musicbrainz\.org.*/release.*';
-Playgrub.source.error = 'Playgrub currently supports Musicbrainz Release pages only. Please check your url.';
+Playgrub.source.error = 'Tomahawklet currently supports Musicbrainz Release pages only. Please check your url.';
 Playgrub.source.scrape = function() {
     var artist = $('table.artisttitle td.title a').html();
     $("tr.track").each(function () {

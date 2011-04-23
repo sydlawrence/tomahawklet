@@ -9,7 +9,7 @@
  */
 
 Playgrub.source.url = 'http://.*apple\.com.*/itunes/charts/songs.*';
-Playgrub.source.error = 'Playgrub currently supports iTunes Charts pages only. Please check your url.';
+Playgrub.source.error = 'Tomahawklet currently supports iTunes Charts pages only. Please check your url.';
 Playgrub.source.scrape = function() {
     $("li").each(function () {
         var artist = $(this).children('h4').text();

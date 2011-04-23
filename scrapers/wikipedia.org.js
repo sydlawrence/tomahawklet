@@ -16,7 +16,7 @@
 
 // Hmm, http://*.wikipedia.org/wiki/* doesn't seem to work
 Playgrub.source.url = 'http://en.wikipedia.org/wiki/*';
-Playgrub.source.error = 'Sorry, any songs named on this page aren\'t in the expected format';
+Playgrub.source.error = 'Sorry, any songs mentioned on this page aren\'t in the expected format';
 
 Playgrub.source.scrape = function() {
 	// Tables

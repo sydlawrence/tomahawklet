@@ -14,7 +14,7 @@ Playgrub.source.scrape = function() {
     var artist;
     var song;
 
-    $(".msgtxt").each(function () {
+    $(".tweet-text").each(function () {
         if($(this).text().match(reg)) {
             artist = RegExp.$1;
             song = RegExp.$2;
@@ -23,14 +23,6 @@ Playgrub.source.scrape = function() {
         }
     });
 
-    $(".entry-content").each(function () {
-        if($(this).text().match(reg)) {
-            artist = RegExp.$1;
-            song = RegExp.$2;
-            if(artist.length > 0 && song.length > 0)
-                Playgrub.playlist.add_track(artist, song);
-        }
-    });
 }
 
 Playgrub.source.start();
