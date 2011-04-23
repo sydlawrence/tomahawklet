@@ -17,7 +17,7 @@ from models import PlaylistTrack
 from models import PlaygrubAccount
 from models import PlaygrubChartEntry
 
-pghost = "http://www.playgrub.com/"
+pghost = "http://tomahawkbar.appspot.com/"
 
 class IndexHandler(webapp.RequestHandler):
 
@@ -103,7 +103,7 @@ class ChartXSPFHandler(webapp.RequestHandler):
     
     songs = q.fetch(50)
     class ChartHeader(object):
-      title = "The Latest Playgrub Chart" # Include the local time maybe?
+      title = "The Latest Tomahawklet Charts" # Include the local time maybe?
       url = pghost+"#xspf="+pghost+"charts"
     
     head = ChartHeader()
