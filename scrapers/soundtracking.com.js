@@ -6,7 +6,7 @@
  *
  * Notes:
  *
- * This scraper will work on Hype Machine pages.
+ * This scraper will work on Soundtracking song pages.
  */
 Playgrub.source.url = 'http://.*\.soundtracking.com/tracks.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'

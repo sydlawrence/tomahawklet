@@ -13,19 +13,19 @@ html {
 #playgrub-main {
     position: absolute;
     overflow: hidden;
-    top: 30px;
-    bottom: 50px;
+    top: 15px;
+    bottom: 30px;
     left: 15px;
     width: 225px;
     padding: 15px 20px 20px 20px;
     background: #ffffff;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 #playgrub-bookmarklet {
-    top: 30px;
+    top: 15px;
     right: 30px;
-    bottom: 50px;
+    bottom: 30px;
     left: 300px;
 }
 
@@ -34,7 +34,7 @@ html {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -30px auto;
+    margin: 0 auto -60px auto;
     min-width: 500px;
     padding: 0px;
 }
