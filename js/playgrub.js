@@ -500,7 +500,10 @@ Playgrub.XSPFSource = function(xspf_url) {
         Playgrub.playlist.xspf = Playgrub.source.url;
         Playgrub.playlist.title = jplaylist.title;
         // Playgrub.playlist.id = rplaylist.id;
-        for(n in jplaylist.trackList.track) {
+	if (!(jplaylist.trackList.track instanceof Array)) {
+ 	jplaylist.trackList.track = [jplaylist.trackList.track];
+	}        
+	for(n in jplaylist.trackList.track) {
             Playgrub.playlist.add_track(jplaylist.trackList.track[n].creator,jplaylist.trackList.track[n].title);
         }
         Playgrub.Events.foundSongs();
