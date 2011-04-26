@@ -12,9 +12,9 @@ Playgrub.source.url = 'http://.*\.napster.com/playlist.htm.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
 
-    $(".track_info").each(function() {
+    $("td.trackInfo").each(function() {
         var artist = $(this).find('a:last-child').text();
-        var song = $(this).find('a:second-child').text();
+        var song = $(this).find('a.').text();
 
         artist = $.trim(artist);
         song = $.trim(song);
