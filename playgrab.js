@@ -152,7 +152,19 @@ Playgrab = {
 			e.preventDefault();
 			$('.tomahk-iframe').remove();
 			var iframe = $("<iframe style='border:none;position:absolute;top:0;right:0;z-index:9999999;' class='tomahk-iframe' width=300 height=300 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
-			$('body').append(iframe);
+			var closer = $("<span class='tomahk-iframe'>x</span>");
+			closer.css({
+				position:"absolute",
+				top:0,
+				zIndex:99999999,
+				right:270,
+				fontSize:"30px",
+				fontWeight:"bold"
+			});
+			closer.click(function() {
+				$('.tomahk-iframe').remove();
+			});
+			$('body').append(iframe).append(closer);
 		})
 		return;
 
