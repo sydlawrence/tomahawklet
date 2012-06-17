@@ -36,10 +36,10 @@ if (window.location.href.indexOf("pitchfork.com/forkcast") != -1)
     var artist = $(this).find(".artist").html();
     var title = $(this).find(".title").html();
 
-    if (artist !== undefined) {
+    if (artist !== undefined && artist) {
         artist = artist.replace(":","")
     }
-    if (artist != "" && title !== "" && artist !== undefined && title !== undefined)
+    if (artist && title && artist != "" && title !== "" && artist !== undefined && title !== undefined)
         Playgrub.playlist.add_track(artist, title);
     })
 }
