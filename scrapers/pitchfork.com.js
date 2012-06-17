@@ -33,10 +33,12 @@ if (window.location.href.indexOf("pitchfork.com/forkcast") != -1)
 } else if (window.location.href.indexOf("pitchfork.com/reviews/best/tracks") != -1) {
     $('.info').each(function(){
         alert("hi");
-    var artist = $(this).find(".artist").html().replace(":","");
+    var artist = $(this).find(".artist").html();
     var title = $(this).find(".title").html();
 
-
+    if (artist !== undefined) {
+        artist = artist.replace(":","")
+    }
     if (artist != "" && title !== "" && artist !== undefined && title !== undefined)
         Playgrub.playlist.add_track(artist, title);
     })
