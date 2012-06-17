@@ -128,6 +128,7 @@ Playgrab = {
 		$closer.css({
 			position:"fixed",
 			top:0,
+			left:274,
 			padding:"5px 10px",
 			background:"#f00",
 			color:"#fff",
@@ -140,7 +141,7 @@ Playgrab = {
 		})
 
 
-		$('body').append($div);
+		$('body').append($div).$closer;
 	},
 	rendered:{},
 	displayTrack: function(artist, title) {
