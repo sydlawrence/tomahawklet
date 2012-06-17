@@ -139,9 +139,10 @@ Playgrab = {
 		$closer.click(function() {
 			$div.remove();
 			$(this).remove();
+			$('body').css("padding-left",0);
 		})
 
-
+		$('body').css("padding-left",274);
 		$('body').append($div).append($closer);
 	},
 	rendered:{},
