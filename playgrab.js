@@ -196,16 +196,17 @@ Playgrab = {
 			fontWeight:"bold"
 		});
 
+		var that = this;
 		li.find('a').click(function(e) {
 			e.preventDefault();
 			$('.tomahk-iframe').remove();
-			var iframe = $("<iframe style='border:none;position:fixed;top:0;right:0;z-index:9999999;' class='tomahk-iframe' width=300 height=300 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
+			var iframe = $("<iframe style='border:none;position:fixed;top:0;left:0;z-index:9999999;' class='tomahk-iframe' width=274 height=274 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
 			var closer = $("<span class='tomahk-iframe'>x</span>");
 			closer.css({
 				position:"fixed",
 				top:10,
 				zIndex:99999999,
-				right:270,
+				left:220,
 				fontSize:"30px",
 				fontWeight:"bold",
 				fontFamily:"helvetica, arial, sans-serif",
@@ -214,6 +215,10 @@ Playgrab = {
 				background:"#3a3a3a",
 				color:"#ffffff"
 			});
+			that.element.css({
+				top:274
+			});
+
 			closer.click(function() {
 				$('.tomahk-iframe').remove();
 			});
