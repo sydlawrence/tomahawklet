@@ -140,7 +140,7 @@ Playgrab = {
 		$closer.click(function() {
 			$div.remove();
 			$(this).remove();
-			$('body').css("padding-left",0);
+			$('body').animate({paddingLeft:0});
 		})
 
 		$('body').animate({paddingLeft:274}, 500);
