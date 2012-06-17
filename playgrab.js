@@ -65,7 +65,7 @@ Playgrab = {
 
 	},
 	checkUrl: function(url) {
-		url = url.replace("*");
+		url = url.replace("*","");
 		var location = window.location.href;
 		if (location.indexOf(url) != -1) {
 			console.log("true: "+url);
