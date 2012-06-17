@@ -1,8 +1,8 @@
 
 
+var Playgrab;
 
-
-var Playgrab = {
+Playgrab = {
 	insertAddButton: function(element,artist, title ) {
 		var btn = $('<img src="https://github.com/sydlawrence/tomahawklet/raw/master/tomahawk_button.png" />');
 		btn.click(function() {
@@ -23,7 +23,7 @@ var Playgrab = {
 	retreivePlaylist: function() {
 
 	},
-	checkUrL: function(url) {
+	checkUrl: function(url) {
 		url = url.replace("*");
 		var location = window.location.href;
 		if (location.indexOf(url) != -1) {
@@ -34,7 +34,7 @@ var Playgrab = {
 	},
 	source: {
 		set_url: function(url) {
-			var bool = this.checkUrl(url);
+			var bool = Playgrab.checkUrl(url);
 			if (bool) this.url = url;
 			return bool
 		},
@@ -42,11 +42,14 @@ var Playgrab = {
 		error: "",
 		scrape: function() {
 
-			$('.chart li').each(function() {
-				var alt = $(this).find("img").attr("alt");
-				alt = alt.split(" - ");
-				Playgrab.insertAddButton($(this),alt[1],alt[0])
-			});
+			$('[typeof="mo:Track"]').each(function(){
+				var title = $(this).find("[property='dc:title']").html();
+				var artist = $(this).find("[typeof='mo:MusicArtist']").find("[property='foaf:name']").html();
+
+
+            	Playgrab.insertAddButton($(this),artist,title);
+
+			})
 			
 
 		},
@@ -77,7 +80,8 @@ var Playgrab = {
 		}
 	},
 	init: function() {
-		Playgrub.source.addScraper('bbc.co.uk');	
+//		Playgrab.source.start();
+		Playgrab.addScraper('rdf');	
 	}
 }
 
