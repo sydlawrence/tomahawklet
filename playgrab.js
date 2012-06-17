@@ -1,32 +1,58 @@
 
 
+
+
 var Playgrab = {
 	insertAddButton: function(element,artist, title ) {
-		var btn = $('<button>Add to playlist</button>');
+		var btn = $('<img src="https://github.com/sydlawrence/tomahawklet/raw/master/tomahawk_button.png" />');
 		btn.click(function() {
 			Playgrub.playlist.add_track(artist,title);
+			btn.fadeOut();
 		}).css({
 			position:"absolute",
-			top:10,
+			top:"50%",
+			marginTop:-12,
 			left:10,
 			zIndex:100
 		});
 		element.append(btn);
 	},
+	savePlaylist: function() {
+
+	},
+	retreivePlaylist: function() {
+
+	},
+	checkUrL: function(url) {
+		url = url.replace("*");
+		var location = window.location.href;
+		if (location.indexOf(url) != -1) {
+			return true;
+		}
+		return false;
+
+	},
 	source: {
+		set_url: function(url) {
+			var bool = this.checkUrl(url);
+			if (bool) this.url = url;
+			return bool
+		},
 		url: "",
 		error: "",
 		scrape: function() {
+
 			$('.chart li').each(function() {
 				var alt = $(this).find("img").attr("alt");
 				alt = alt.split(" - ");
 				Playgrab.insertAddButton($(this),alt[1],alt[0])
-			})
+			});
 			
 
 		},
 		start: function() {
 			// if it is the correct url
+			if (!Playgrab.checkUrl(this.url)) return;
 			this.scrape();
 		}
 	},
@@ -51,7 +77,7 @@ var Playgrab = {
 		}
 	},
 	init: function() {
-		Playgrub.source.start();	
+		Playgrub.source.addScraper('bbc.co.uk');	
 	}
 }
 

@@ -11,14 +11,11 @@
 if(Playgrub.source.set_url('http://www.bbc.co.uk/radio1/chart/*')) {
     Playgrub.source.error = 'Oops, make sure its a singles chart!';
     Playgrub.source.scrape = function() {
-        if (/singles\/?$/.test(location.href)) {
-           $("div.chart li").each(function () {
-            var artist = $(this).find("span.artist").text();
-            var title = $(this).find("span.track").text();
-            if( artist && title && artist != "" && title != "")
-                Playgrub.playlist.add_track(artist,title);
-            });
-        }
+        $('.chart li').each(function() {
+            var alt = $(this).find("img").attr("alt");
+            alt = alt.split(" - ");
+            Playgrab.insertAddButton($(this),alt[1],alt[0])
+        });
     }
 }
 
@@ -61,12 +58,10 @@ if(Playgrub.source.set_url('http://www\.bbc\.co\.uk/programmes/*')) {
 if(Playgrub.source.set_url('http://www.bbc.co.uk/radio1/playlist/')) {
     Playgrub.source.error = 'Sorry, no suitable songs could be found';
     Playgrub.source.scrape = function() {
-        $("div.artists_and_songs ul.clearme").each(function () {
-            var artist = $(this).find("li.artist").text();
-            console.log(artist);
-            var title = $(this).find("li.song").text();
-            if( artist && title && artist != "" && title != "")
-                Playgrub.playlist.add_track(artist,title);
+        $('.chart li').each(function() {
+            var alt = $(this).find("img").attr("alt");
+            alt = alt.split(" - ");
+            Playgrab.insertAddButton($(this),alt[1],alt[0])
         });
     }
 }
@@ -83,11 +78,10 @@ if(Playgrub.source.set_url('http://www.bbc.co.uk/radio1/playlist/')) {
 if(Playgrub.source.set_url('http://www.bbc.co.uk/radio2/music/playlist/')) {
     Playgrub.source.error = 'Sorry, no suitable songs could be found';
     Playgrub.source.scrape = function() {
-        $("div.box ol li div.record").each(function () {
-            var artist = $(this).text().split("- ")[0];
-            var title = $(this).text().split("- ")[1];
-            if( artist && title && artist != "" && title != "")
-                Playgrub.playlist.add_track(artist,title);
+        $('.chart li').each(function() {
+            var alt = $(this).find("img").attr("alt");
+            alt = alt.split(" - ");
+            Playgrab.insertAddButton($(this),alt[1],alt[0])
         });
     }
 }
