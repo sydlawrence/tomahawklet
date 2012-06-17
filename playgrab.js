@@ -160,8 +160,9 @@ Playgrab = {
 				right:270,
 				fontSize:"30px",
 				fontWeight:"bold",
+				fontFamily:"helvetica, arial, sans-serif",
 				display:"block",
-				padding:5,
+				padding:"5px 5px 15px 5px",
 				background:"#3a3a3a",
 				color:"#ffffff"
 			});
