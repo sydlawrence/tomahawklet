@@ -134,6 +134,18 @@ Playgrab = {
 		});
 
 		track.renderSummary(this.element);
+		this.element.find("h3, h4").css({
+			width:"100%",
+			textOverflow:"ellipsis",
+			overflow:"hidden"
+
+		});
+		this.element.find("h4").css({
+			fontSize:"12"
+		});
+		this.element.find("h3").css({
+			fontWeight:"bold"
+		});
 		return;
 
 

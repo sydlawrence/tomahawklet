@@ -11,7 +11,7 @@
 * To test, go to http://www.bbc.co.uk/radio1/programmes/schedules 
 * and pick a recent show.
 */
-if(Playgrub.source.set_url('')) {
+if(Playgrub.source.set_url('*')) {
     Playgrub.source.error = 'This is an rdf test';
     Playgrub.source.scrape = function() {
         $('[typeof="mo:Track"]').each(function(){
