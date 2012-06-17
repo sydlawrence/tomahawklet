@@ -118,10 +118,11 @@ Playgrab = {
 		}
 	},
 	element: undefined,
+	div: undefined,
 	display: function() {
 		this.element = $("<ul style='margin:0;padding:0'/>");
-		var $div = $("<div  style='position:fixed;z-index:999999;width:274px;top:0;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;border-bottom:1px solid #ff0000'/>")
-		$div.append(this.element);
+		this.div = $("<div  style='position:fixed;z-index:999999;width:274px;top:0;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;border-bottom:1px solid #ff0000'/>")
+		this.div.append(this.element);
 
 		var $closer = $("<div>Close</div>");
 		$closer.css({
@@ -142,8 +143,8 @@ Playgrab = {
 			$('body').css("padding-left",0);
 		})
 
-		$('body').css("padding-left",274);
-		$('body').append($div).append($closer);
+		$('body').animate({paddingLeft:274}, 500);
+		$('body').append(this.div).append($closer);
 	},
 	rendered:{},
 	displayTrack: function(artist, title) {
@@ -215,13 +216,13 @@ Playgrab = {
 				background:"#3a3a3a",
 				color:"#ffffff"
 			});
-			$div.css({
+			that.div.css({
 				top:274
 			});
 
 			closer.click(function() {
 				$('.tomahk-iframe').remove();
-				$div.css({
+				that.div.css({
 					top:0
 				});
 			});
@@ -230,46 +231,6 @@ Playgrab = {
 		return;
 
 
-		var playLink = $("<a target='_blank' href='http://toma.hk/?artist="+escape(artist)+"&title="+escape(title)+"'><span class='title' style='font-weight:bold'>"+title+"</span> - <span class='artist'>"+artist+"</span></a>")
-		var li = $("<li/>");
-		li.append(playLink);
-		li.css({
-			display: "block",
-			borderBottom:"1px solid #ccc",
-			paddingTop:"8px",
-			position:"relative",
-			paddingBottom:"8px",
-			paddingLeft:40,
-		});
-		var button = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/tomahawk_button.png'/>");
-		button.css({
-			position:"absolute",
-			left:0,
-			top:"50%",
-			marginTop: -12
-		});
-
-		button.click(function() {
-			alert("adding this song);")
-			button.hide();
-		})
-
-
-
-		playLink.click(function(e) {
-			e.preventDefault();
-			$('.tomahawk-iframe').remove();
-			iframe.css({
-				position: "absolute",
-				zIndex:999999,
-				top:0,
-				right:0
-			})
-			$('body').append(iframe);
-
-		})
-
-		this.element.append(li)
 	},
 	init: function() {
 		this.display();
