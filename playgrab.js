@@ -229,10 +229,7 @@ var Playgrub = Playgrab;
 
 
 
-var script = document.createElement('script');
-script.type = 'text/javascript';
-document.getElementsByTagName('head')[0].appendChild(script);
-script.src = 'http://stage.toma.hk/js/bootstrap/bootstrap-tooltip.js';
+
 
 
 var script = document.createElement('script');
@@ -256,6 +253,11 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 script.onload = function() {
 	var t = setTimeout(function() {
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		document.getElementsByTagName('head')[0].appendChild(script);
+		script.src = 'http://stage.toma.hk/js/bootstrap/bootstrap-tooltip.js';
+		
 		Playgrub.init();
 	},500);
 }
