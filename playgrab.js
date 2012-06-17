@@ -155,6 +155,28 @@ Playgrab = {
 		});
 
 		var li = track.renderSummary(this.element);
+
+		var placeholder = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/tomahawk_button.png'/>");
+		placeholder.css({
+			position:"absolute",
+			top:0,
+			left:0,
+			z-index:0
+		});
+		var img = li.find("img");
+		img.css({opacity:0});
+
+		li.append(placeholder);
+
+		img.on("load", function() {
+			img.animate({opacity:1});
+		})
+		if (img[0].complete) {
+			img.animate({opacity:1});
+		}
+
+
+
 		this.element.find("h3, h4").css({
 			width:"100%",
 			textOverflow:"ellipsis",
