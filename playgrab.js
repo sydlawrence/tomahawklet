@@ -68,7 +68,7 @@ Playgrab = {
 	},
 	element: undefined,
 	display: function() {
-		this.element = $("<ul style='position:absolute;z-index:999999;top:0;left:0;padding:20px;background:#f1f1f1;border-right:1px solid #ff0000;border-bottom:1px solid #ff0000'/>");
+		this.element = $("<ul style='position:absolute;z-index:999999;max-width:30%;top:0;left:0;padding:20px;background:#f1f1f1;border-right:1px solid #ff0000;border-bottom:1px solid #ff0000'/>");
 		$('body').append(this.element);
 	},
 	displayTrack: function(artist, title) {
