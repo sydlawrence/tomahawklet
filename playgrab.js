@@ -77,13 +77,16 @@ Playgrab = {
 		li.css({
 			display: "block",
 			borderBottom:"1px solid #ccc",
-			lineHeight:"30px",
+			paddingTop:"8px",
+			paddingBottom:"8px",
 			paddingLeft:40,
 			background:"url(https://github.com/sydlawrence/tomahawklet/raw/master/tomahawk_button.png) no-repeat center left"
 		})
 
 		li.click(function() {
 			alert("adding this song");
+
+			li.fadeOut();
 		})
 
 		this.element.append(li)
