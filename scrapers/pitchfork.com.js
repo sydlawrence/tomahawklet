@@ -9,7 +9,7 @@
  */
 
 
-Playgrub.source.url = 'http://pitchfork.com';
+Playgrub.source.url = 'http://pitchfork\.com';
 Playgrub.source.error = 'Tomahawk currently supports the Track Reviews & Forkcast pages only. Please check your url.';
 Playgrub.source.scrape = function() {
 if (window.location.href.indexOf("pitchfork.com/forkcast") != -1) 
