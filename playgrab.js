@@ -155,11 +155,15 @@ Playgrab = {
 			var closer = $("<span class='tomahk-iframe'>x</span>");
 			closer.css({
 				position:"absolute",
-				top:0,
+				top:10,
 				zIndex:99999999,
 				right:270,
 				fontSize:"30px",
-				fontWeight:"bold"
+				fontWeight:"bold",
+				display:"block",
+				padding:5,
+				background:"#3a3a3a",
+				color:"#ffffff"
 			});
 			closer.click(function() {
 				$('.tomahk-iframe').remove();
