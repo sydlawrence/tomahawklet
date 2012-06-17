@@ -133,7 +133,7 @@ Playgrab = {
 			artist:artist
 		});
 
-		track.renderSummary(this.element);
+		var li = track.renderSummary(this.element);
 		this.element.find("h3, h4").css({
 			width:"100%",
 			textOverflow:"ellipsis",
@@ -147,6 +147,12 @@ Playgrab = {
 		this.element.find("h3").css({
 			fontWeight:"bold"
 		});
+
+		li.find(a).click(function(e) {
+			$('.tomahk-iframe').remove();
+			var iframe = $("<iframe class='tomahk-iframe' width=300 height=300 src='http://toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'");
+			$('body').append(iframe);
+		})
 		return;
 
 
@@ -179,7 +185,6 @@ Playgrab = {
 		playLink.click(function(e) {
 			e.preventDefault();
 			$('.tomahawk-iframe').remove();
-			var iframe = $("<iframe class='tomahawk-iframe' width=300 height=300 src='http://toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'");
 			iframe.css({
 				position: "absolute",
 				zIndex:999999,
