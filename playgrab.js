@@ -141,7 +141,7 @@ Playgrab = {
 		})
 
 
-		$('body').append($div).$closer;
+		$('body').append($div).append($closer);
 	},
 	rendered:{},
 	displayTrack: function(artist, title) {
