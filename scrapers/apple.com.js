@@ -12,8 +12,8 @@ Playgrub.source.url = 'apple.com';
 Playgrub.source.error = 'Tomahawklet currently supports iTunes Charts pages only. Please check your url.';
 Playgrub.source.scrape = function() {
     $("ol li").each(function () {
-        var artist = $(this).find("a strong").html();;
-        var title = $(this).find("a span").html();;
+        var title = $(this).find("a strong").html();;
+        var artist = $(this).find("a span").html();;
         if (artist !== "" && title !== "")
         	Playgrab.insertAddButton($(this),artist,title);
     });
