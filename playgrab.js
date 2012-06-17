@@ -69,8 +69,11 @@ Playgrab = {
 		console.log(url);
 		var regex = new RegExp(url);
         if(regex.exec(window.location.href)) {
+        	console.log("true: "+url);
         	return true;
         }
+        console.log("false: "+url);
+
         return false;
 
 	},
