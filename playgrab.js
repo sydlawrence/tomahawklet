@@ -124,6 +124,16 @@ Playgrab = {
 		$('body').append(this.element);
 	},
 	displayTrack: function(artist, title) {
+
+		var track = new Track({
+			title:title,
+			artist:artist
+		});
+
+		track.renderSummary(this.element);
+		return;
+
+
 		var playLink = $("<a target='_blank' href='http://toma.hk/?artist="+escape(artist)+"&title="+escape(title)+"'><span class='title' style='font-weight:bold'>"+title+"</span> - <span class='artist'>"+artist+"</span></a>")
 		var li = $("<li/>");
 		li.append(playLink);
@@ -177,6 +187,22 @@ Playgrab = {
 
 var Playgrub = Playgrab;
 
+
+
+var script = document.createElement('script');
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+script.src = 'http://stage.toma.hj/jk/classes/Artist.js';
+
+var script = document.createElement('script');
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+script.src = 'http://stage.toma.hj/jk/classes/Track.js';
+
+var script = document.createElement('script');
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+script.src = 'http://stage.toma.hj/jk/classes/Album.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
