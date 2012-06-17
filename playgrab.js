@@ -84,6 +84,7 @@ Playgrab = {
 		Playgrab.addScraper('rdf');	
 		Playgrab.addScraper('bbc.co.uk');	
 		Playgrab.addScraper('absoluteradio.co.uk');	
+		Playgrab.addScraper('apple.com');	
 
 	}
 }

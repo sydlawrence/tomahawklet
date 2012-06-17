@@ -13,7 +13,7 @@ Playgrub.source.url = 'http://www.absoluteradio.co.uk/playlist/';
 Playgrub.source.error = 'Sorry, no suitable songs could be found';
 Playgrub.source.scrape = function() {
 	$("#results li").each(function () {
-		var artist = $(this).find('.artist').html();
+		var artist = $(this).find('.artist').html().replace("by ","");
 		var title = $(this).find('.track').html();
 
 		if (artist !== "" && title !== "")
