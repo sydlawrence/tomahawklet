@@ -31,13 +31,14 @@ if (window.location.href.indexOf("pitchfork.com/forkcast") != -1)
     });
     
 } else if (window.location.href.indexOf("pitchfork.com/reviews/best/tracks") != -1) {
-    $("h2.tombstone").each(function () {
-        var song_result = $($(this).children('a')[1]).text();
-	song_result = song_result.replace('"', '');
-	song_result = song_result.replace('"', '');
-        var artist = $($(this).children('a')[0]).text();
-        Playgrub.playlist.add_track(artist, song_result);
-    });    
+    $('.info').each(function(){
+
+    var artist = $(this).find(".artist").html();
+    var title = $(this).find(".title").html();
+
+    if (artist != "" && title !== "")
+        Playgrub.playlist.add_track(artist, title);
+    })
 }
 
 };
