@@ -77,7 +77,7 @@ Playgrab = {
 		li.css({
 			display: "block",
 			borderBottom:"1px solid #ccc",
-			lineHeight:20
+			lineHeight:"20px"
 		})
 
 		li.click(function() {
