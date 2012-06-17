@@ -156,12 +156,12 @@ Playgrab = {
 
 		var li = track.renderSummary(this.element);
 
-		var placeholder = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/tomahawk_button.png'/>");
+		var placeholder = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/placeholder.png'/>");
 		placeholder.css({
 			position:"absolute",
 			top:0,
 			left:0,
-			zIndex:0
+			zIndex:-1
 		});
 		var img = li.find("img");
 		img.css({opacity:0});
