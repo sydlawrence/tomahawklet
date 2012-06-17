@@ -112,7 +112,6 @@ Playgrab = {
 		tracks: [],
 		add_track: function(artist,title) {
 			Playgrab.displayTrack(artist, title);
-			alert(this.tracks.length);
 		},
 		remove_track: function(index) {
 			alert("to be implemented");
