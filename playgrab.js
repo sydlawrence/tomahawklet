@@ -132,7 +132,7 @@ Playgrab = {
 			right:0,
 			textAlign:"center",
 			fontSize:"30",
-			fontWeight:"bold";
+			fontWeight:"bold"
 		})
 		this.element.append(this.loading);
 		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:0;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;'/>")
