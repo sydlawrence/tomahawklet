@@ -216,15 +216,12 @@ Playgrab = {
 				background:"#3a3a3a",
 				color:"#ffffff"
 			});
-			that.div.css({
-				top:274
-			});
-
+			iframe.css({borderRight:"1px solid #f00"});
+		
+			that.div.animate({top:274});
 			closer.click(function() {
 				$('.tomahk-iframe').remove();
-				that.div.css({
-					top:0
-				});
+				that.div.animate({top:0});
 			});
 			$('body').append(iframe).append(closer);
 		})
