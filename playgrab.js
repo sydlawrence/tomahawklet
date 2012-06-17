@@ -163,6 +163,7 @@ Playgrab = {
 	rendered:{},
 	displayTrack: function(artist, title) {
 		if (artist === undefined || title === undefined) return;
+		if (artist === "undefined" || title === "undefined") return;
 
 		if (this.rendered[artist+title]) return;
 		this.rendered[artist+title] = true;
@@ -206,14 +207,17 @@ Playgrab = {
 			width:"100%",
 			textOverflow:"ellipsis",
 			overflow:"hidden",
-			whiteSpace:"nowrap"
+			whiteSpace:"nowrap",
+			textTransform:"uppercase",
 
 		});
 		this.element.find("h4").css({
-			fontSize:"12"
+			fontSize:"9px",
+			fontWeight:"normal"
 		});
 		this.element.find("h3").css({
-			fontWeight:"bold"
+			fontWeight:"bold",
+			fontSize:"13px"
 		});
 
 		var that = this;
