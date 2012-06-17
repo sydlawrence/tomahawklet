@@ -121,7 +121,7 @@ Playgrab = {
 	},
 	element: undefined,
 	div: undefined,
-	loading:undefined;
+	loading:undefined,
 	display: function() {
 		this.element = $("<ul style='margin:0;padding:0'/>");
 		this.loading = $("<div>Loading</div>");
