@@ -151,7 +151,7 @@ Playgrab = {
 		li.find('a').click(function(e) {
 			e.preventDefault();
 			$('.tomahk-iframe').remove();
-			var iframe = $("<iframe style='border:none;position:absolute;top:0;right:0' class='tomahk-iframe' width=300 height=300 src='http://toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
+			var iframe = $("<iframe style='border:none;position:absolute;top:0;right:0;z-index:9999999;' class='tomahk-iframe' width=300 height=300 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
 			$('body').append(iframe);
 		})
 		return;
