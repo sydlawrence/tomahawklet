@@ -77,7 +77,9 @@ Playgrab = {
 		li.css({
 			display: "block",
 			borderBottom:"1px solid #ccc",
-			lineHeight:"20px"
+			lineHeight:"30px",
+			paddingLeft:40,
+			background:"url(https://github.com/sydlawrence/tomahawklet/raw/master/tomahawk_button.png) no-repeat center left"
 		})
 
 		li.click(function() {
