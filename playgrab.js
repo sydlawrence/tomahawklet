@@ -1,3 +1,55 @@
+var SCRAPERS = [
+	'rdf',	
+	'8tracks.com',	
+	'absoluteradio.co.uk',	
+	'apple.com',
+	'bbc.co.uk',	
+	'billboard.com',
+	'blip.fm',
+	'default',
+	'everyhit.com',
+	'ex.fm',
+	'fiql.com',
+	'grooveshark.com',
+	'hypem.com',
+	'herrangradio.co.uk',
+	'last.fm',
+	'lastfm.com.br',
+	'lastfm.com.tr',
+	'lastfm.de',
+	'lastfm.es',
+	'lastfm.fr',
+	'lastfm.it',
+	'lastfm.jp',
+	'lastfm.pl',
+	'lastfm.ru',
+	'lastfm.se',
+	'mixcloud.com',
+	'mog.com',
+	'music.yahoo.com',
+	'musicbrainz.org',
+	'mymusiclists.com',
+	'napster.com',
+	'nme.com',
+	'pitchfork.com',
+	'playbyaol.com',
+	'playlick.com',
+	'playlistify.org',
+	'rdio.com',
+	'sharemyplaylists.com',
+	'simfy.de',
+	'songkick.com',
+	'soundcloud.com',
+	'soundtracking.com',
+	'twitter.com',
+	'vevo.com',
+	'wikipedia.org',
+	'wmce.de',
+	'xfm.co.uk',
+	'youtube.com'
+];
+
+
 
 
 var Playgrab;
@@ -72,19 +124,43 @@ Playgrab = {
 		$('body').append(this.element);
 	},
 	displayTrack: function(artist, title) {
-		var li = $("<li><span class='title' style='font-weight:bold'>"+title+"</span> - <span class='artist'>"+artist+"</span></li>")
-		
+		var playLink = $("<a target='_blank' href='http://toma.hk/?artist="+escape(artist)+"&title="+escape(title)+"'><span class='title' style='font-weight:bold'>"+title+"</span> - <span class='artist'>"+artist+"</span></a>")
+		var li = $("<li/>");
+		li.append(playLink);
 		li.css({
 			display: "block",
 			borderBottom:"1px solid #ccc",
 			paddingTop:"8px",
+			position:"relative",
 			paddingBottom:"8px",
 			paddingLeft:40,
-			background:"url(https://github.com/sydlawrence/tomahawklet/raw/master/tomahawk_button.png) no-repeat center left"
+		});
+		var button = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/tomahawk_button.png'/>");
+		button.css({
+			position:"absolute",
+			left:0,
+			top:"50%",
+			marginTop: -12
+		});
+
+		button.click(function() {
+			alert("adding this song);")
+			button.hide();
 		})
 
-		li.click(function() {
-			alert("adding this song");
+
+
+		playLink.click(function() {
+			alert("playing this song");
+			$('.tomahawk-iframe').remove();
+			var iframe = $("<iframe class='tomahawk-iframe' width=300 height=300 src='http://toma.hk/embed.php?artist="+artist+"&title="+title+"&autoplay=true'");
+			iframe.css({
+				position: "absolute",
+				zIndex:999999,
+				top:0,
+				right:0
+			})
+			$('body').append(iframe);
 
 			li.fadeOut();
 		})
@@ -94,11 +170,9 @@ Playgrab = {
 	init: function() {
 		this.display();
 //		Playgrab.source.start();
-		Playgrab.addScraper('rdf');	
-		Playgrab.addScraper('bbc.co.uk');	
-		Playgrab.addScraper('absoluteradio.co.uk');	
-		Playgrab.addScraper('apple.com');	
-
+		for (var i = 0; i < SCRAPERS.length;i++) {
+			Playgrab.addScraper(SCRAPERS[i]);	
+		}
 	}
 }
 
