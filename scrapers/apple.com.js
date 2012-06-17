@@ -8,7 +8,7 @@
  * This scraper will work on the Apple.com iTunes Chart Page
  */
 
-Playgrub.source.url = '/itunes/charts/songs.';
+Playgrub.source.url = 'apple.com';
 Playgrub.source.error = 'Tomahawklet currently supports iTunes Charts pages only. Please check your url.';
 Playgrub.source.scrape = function() {
     $("ol li").each(function () {
