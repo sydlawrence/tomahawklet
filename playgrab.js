@@ -154,7 +154,7 @@ Playgrab = {
 			var iframe = $("<iframe style='border:none;position:absolute;top:0;right:0;z-index:9999999;' class='tomahk-iframe' width=300 height=300 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
 			var closer = $("<span class='tomahk-iframe'>x</span>");
 			closer.css({
-				position:"absolute",
+				position:"fixed",
 				top:10,
 				zIndex:99999999,
 				right:270,
@@ -226,6 +226,13 @@ Playgrab = {
 
 var Playgrub = Playgrab;
 
+
+
+
+var script = document.createElement('script');
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+script.src = 'http://stage.toma.hk/js/bootstrap/bootstrap-tooltip.js';
 
 
 var script = document.createElement('script');
