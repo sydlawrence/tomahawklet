@@ -125,7 +125,7 @@ Playgrab = {
 		this.element = $("<ul style='margin:0;padding:0'/>");
 		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:0;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;'/>")
 		this.div.append(this.element);
-
+		var that = this;
 		var $closer = $("<div>Close</div>");
 		$closer.css({
 			position:"fixed",
@@ -140,7 +140,7 @@ Playgrab = {
 			zIndex:999999
 		});
 		$closer.click(function() {
-			$div.remove();
+			that.div.remove();
 			$(this).remove();
 			$('body').animate({paddingLeft:0});
 		})
