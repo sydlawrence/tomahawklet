@@ -209,7 +209,7 @@ Playgrab = {
 			overflow:"hidden",
 			whiteSpace:"nowrap",
 			textTransform:"uppercase",
-
+			fontFamily:"helvetica, arial, sans-serif"
 		});
 		this.element.find("h4").css({
 			fontSize:"9px",
