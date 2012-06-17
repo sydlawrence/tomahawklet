@@ -121,8 +121,20 @@ Playgrab = {
 	},
 	element: undefined,
 	div: undefined,
+	loading:undefined;
 	display: function() {
 		this.element = $("<ul style='margin:0;padding:0'/>");
+		this.loading = $("<div>Loading</div>");
+		this.loading.css({
+			position:"absolute",
+			top:0,
+			left:0,
+			right:0,
+			textAlign:"center",
+			fontSize:"30",
+			fontWeight:"bold";
+		})
+		this.element.append(this.loading);
 		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:0;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;'/>")
 		this.div.append(this.element);
 		var that = this;
@@ -164,6 +176,8 @@ Playgrab = {
 		li.css({width:"50%"});
 
 		li.height(li.width());
+
+		this.loading.remove();
 
 		var placeholder = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/placeholder.png'/>");
 		placeholder.css({
