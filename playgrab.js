@@ -68,12 +68,18 @@ Playgrab = {
 	},
 	element: undefined,
 	display: function() {
-		this.element = $("<ul style='position:absolute;top:0;left:0;padding:20px;background:#f1f1f1;border-right:1px solid #ff0000;border-bottom:1px solid #ff0000'/>");
+		this.element = $("<ul style='position:absolute;z-index:999999;top:0;left:0;padding:20px;background:#f1f1f1;border-right:1px solid #ff0000;border-bottom:1px solid #ff0000'/>");
 		$('body').append(this.element);
 	},
 	displayTrack: function(artist, title) {
-		var li = $("<li><span class='title'>"+title+"</span> - <span class='artist'>"+artist+"</span></li>")
-			
+		var li = $("<li><span class='title' style='font-weight:bold'>"+title+"</span> - <span class='artist'>"+artist+"</span></li>")
+		
+		li.css({
+			display: "block",
+			borderBottom:"1px solid #ccc",
+			lineHeight:20
+		})
+
 		li.click(function() {
 			alert("adding this song");
 		})
