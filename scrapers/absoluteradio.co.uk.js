@@ -18,8 +18,9 @@ Playgrub.source.scrape = function() {
 			var artist = $(this).text();
 			var title = String($(this).next('br')[0].nextSibling.nodeValue);
 			
-			if( artist && title && artist != "" && title != "")
-				Playgrub.playlist.add_track(artist,title);
+			if( artist && title && artist != "" && title != "") {
+            	Playgrab.insertAddButton($(this),artist,title);
+            }
 		} catch (err) {
 		}
 	});
