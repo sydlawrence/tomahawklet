@@ -4,21 +4,7 @@ var Playgrab;
 
 Playgrab = {
 	insertAddButton: function(element,artist, title ) {
-		var btn = $('<img src="https://github.com/sydlawrence/tomahawklet/raw/master/tomahawk_button.png" />');
-		btn.click(function() {
-			Playgrub.playlist.add_track(artist,title);
-			btn.fadeOut();
-		}).css({
-			position:"absolute",
-			top:"50%",
-			marginTop:-12,
-			left:10,
-			zIndex:100
-		});
-
-		if (element.css("position") == "static")
-			element.css({position:'relative'});
-		element.append(btn);
+		this.displayTrack(artist, title);
 	},
 	savePlaylist: function() {
 
@@ -71,18 +57,29 @@ Playgrab = {
 		creator: "",
 		tracks: [],
 		add_track: function(artist,title) {
-			alert(artist+" "+title);
-			this.tracks.push({
-				artist:artist,
-				title:title
-			});
+			this.displayTrack(artist, title);
 			alert(this.tracks.length);
 		},
 		remove_track: function(index) {
 			alert("to be implemented");
 		}
 	},
+	element: undefined,
+	display: function() {
+		this.element = $("<ul style='position:absolute;top:0;left:0;padding:20px;background:#f1f1f1;border-right:1px solid #ff0000;border-bottom:1px solid #ff0000'/>");
+		$('body').append(this.element);
+	},
+	displayTrack: function(artist, title) {
+		var li = $("<li><span class='title'>"+title+"</span> - <span class='artist'>"+artist+"</span></li>")
+			
+		li.click(function() {
+			alert("adding this song");
+		})
+
+		this.element.append(li)
+	},
 	init: function() {
+		this.display();
 //		Playgrab.source.start();
 		Playgrab.addScraper('rdf');	
 		Playgrab.addScraper('bbc.co.uk');	
