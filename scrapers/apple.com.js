@@ -14,7 +14,6 @@ Playgrub.source.scrape = function() {
     $("ol li").each(function () {
         var artist = $(this).find("a strong").html();;
         var title = $(this).find("a span").html();;
-        console.log(artist + " " + title);
         if (artist !== "" && title !== "")
         	Playgrab.insertAddButton($(this),artist,title);
     });

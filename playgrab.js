@@ -15,8 +15,9 @@ Playgrab = {
 			left:10,
 			zIndex:100
 		});
-		alert(element.css("position"));
-		element.css({position:'relative'});
+
+		if (element.css("position") == "static")
+			element.css({position:'relative'});
 		element.append(btn);
 	},
 	savePlaylist: function() {
