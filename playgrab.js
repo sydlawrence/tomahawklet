@@ -171,10 +171,10 @@ Playgrab = {
 		li.append(placeholder);
 
 		img.on("load", function() {
-			img.animate({opacity:1});
+			img.animate({opacity:1}, 500);
 		})
 		if (img[0].complete) {
-			img.animate({opacity:1});
+			img.animate({opacity:1}, 500);
 		}
 
 
