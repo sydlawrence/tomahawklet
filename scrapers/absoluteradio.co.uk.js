@@ -9,20 +9,16 @@
  *
  * To test, go to http://www.absoluteradio.co.uk/music/we_play/playlist/
  */
-Playgrub.source.url = 'http://www.absoluteradio.co.uk/music/we_play/playlist/';
+Playgrub.source.url = 'http://www.absoluteradio.co.uk/playlist/';
 Playgrub.source.error = 'Sorry, no suitable songs could be found';
 Playgrub.source.scrape = function() {
-	$('#playlist strong').remove();
-	$("#playlist a").each(function () {
-		try {
-			var artist = $(this).text();
-			var title = String($(this).next('br')[0].nextSibling.nodeValue);
-			
-			if( artist && title && artist != "" && title != "") {
-            	Playgrab.insertAddButton($(this),artist,title);
-            }
-		} catch (err) {
-		}
+	$("#results li").each(function () {
+		var artist = $(this).find('.artist').html();
+		var title = $(this).find('.track').html();
+
+		if (artist !== "" && title !== "")
+        	Playgrab.insertAddButton($(this),artist,title);
+        
 	});
 }
 
