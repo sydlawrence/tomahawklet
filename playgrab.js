@@ -148,7 +148,7 @@ Playgrab = {
 			fontWeight:"bold"
 		});
 
-		li.find(a).click(function(e) {
+		li.find('a').click(function(e) {
 			$('.tomahk-iframe').remove();
 			var iframe = $("<iframe class='tomahk-iframe' width=300 height=300 src='http://toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'");
 			$('body').append(iframe);
