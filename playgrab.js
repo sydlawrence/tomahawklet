@@ -206,7 +206,7 @@ Playgrab = {
 				position:"fixed",
 				top:10,
 				zIndex:99999999,
-				left:220,
+				left:10,
 				fontSize:"30px",
 				fontWeight:"bold",
 				fontFamily:"helvetica, arial, sans-serif",
@@ -215,12 +215,15 @@ Playgrab = {
 				background:"#3a3a3a",
 				color:"#ffffff"
 			});
-			that.element.css({
+			$div.css({
 				top:274
 			});
 
 			closer.click(function() {
 				$('.tomahk-iframe').remove();
+				$div.css({
+					top:0
+				});
 			});
 			$('body').append(iframe).append(closer);
 		})
