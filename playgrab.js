@@ -153,7 +153,7 @@ Playgrab = {
 		playLink.click(function(e) {
 			e.preventDefault();
 			$('.tomahawk-iframe').remove();
-			var iframe = $("<iframe class='tomahawk-iframe' width=300 height=300 src='http://toma.hk/embed.php?artist="+artist+"&title="+title+"&autoplay=true'");
+			var iframe = $("<iframe class='tomahawk-iframe' width=300 height=300 src='http://toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'");
 			iframe.css({
 				position: "absolute",
 				zIndex:999999,
@@ -162,7 +162,6 @@ Playgrab = {
 			})
 			$('body').append(iframe);
 
-			li.fadeOut();
 		})
 
 		this.element.append(li)
