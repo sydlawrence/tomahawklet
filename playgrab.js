@@ -65,6 +65,7 @@ Playgrab = {
 
 	},
 	checkUrl: function(url) {
+		if (url === "*") return true;
 		console.log(url);
 		var regex = new RegExp(url);
         if(regex.exec(window.location.href)) {
