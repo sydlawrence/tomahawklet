@@ -93,7 +93,9 @@ script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 
 script.onload = function() {
-	Playgrub.init();
+	var t = setTimeout(function() {
+		Playgrub.init();
+	},500);
 }
 script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';
 
