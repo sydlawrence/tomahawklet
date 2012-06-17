@@ -82,6 +82,8 @@ Playgrab = {
 	init: function() {
 //		Playgrab.source.start();
 		Playgrab.addScraper('rdf');	
+		Playgrab.addScraper('bbc.co.uk');	
+
 	}
 }
 
