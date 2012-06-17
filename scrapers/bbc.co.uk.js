@@ -20,6 +20,33 @@ if(Playgrub.source.set_url('http://www.bbc.co.uk/radio1/chart/*')) {
 }
 
 /**
+ * BBC Playlist Playgrub Scraper
+ * Created by: Lucas Gonze
+ * Version: 0.1
+ *
+ * Notes:
+ *
+ * When a playlist is more than a week old the BBC blocks access to
+ * playlists for people who aren't in the UK.  This is because it
+ * doesn't have the rights to play music to them.  So this scraper
+ * will only work outside of the UK for a short time.  
+* 
+* To test, go to http://www.bbc.co.uk/radio1/programmes/schedules 
+* and pick a recent show.
+*/
+if(Playgrub.source.set_url('http://www\.bbc\.co\.uk/programmes/*')) {
+    Playgrub.source.error = 'Please make sure you are on a BBC page with songs.';
+    Playgrub.source.scrape = function() {
+        $('[typeof="mo:Track"]').each(function(){
+            var title = $(this).find("[property='dc:title']").html();
+            var artist = $(this).find("[typeof='mo:MusicArtist']").find("[property='foaf:name']").html();
+            Playgrab.insertAddButton($(this),artist,title);
+
+        })
+    }
+}
+
+/**
  * BBC Radio 1 Playlist Scraper
  * Created by: JP Hastings-Spital & Lucas Gonze
  * Version: 0.1
