@@ -192,17 +192,17 @@ var Playgrub = Playgrab;
 var script = document.createElement('script');
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-script.src = 'http://stage.toma.hj/jk/classes/Artist.js';
+script.src = 'http://stage.toma.hk/js/classes/Artist.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-script.src = 'http://stage.toma.hj/jk/classes/Track.js';
+script.src = 'http://stage.toma.hk/js/classes/Track.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-script.src = 'http://stage.toma.hj/jk/classes/Album.js';
+script.src = 'http://stage.toma.hk/js/classes/Album.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
