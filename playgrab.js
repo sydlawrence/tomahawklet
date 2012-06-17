@@ -12,7 +12,7 @@ var SCRAPERS = [
 	'fiql.com',
 	'grooveshark.com',
 	'hypem.com',
-	'herrangradio.co.uk',
+	'kerrangradio.co.uk',
 	'last.fm',
 	'lastfm.com.br',
 	'lastfm.com.tr',
@@ -150,8 +150,8 @@ Playgrab = {
 
 
 
-		playLink.click(function() {
-			alert("playing this song");
+		playLink.click(function(e) {
+			e.preventDefault();
 			$('.tomahawk-iframe').remove();
 			var iframe = $("<iframe class='tomahawk-iframe' width=300 height=300 src='http://toma.hk/embed.php?artist="+artist+"&title="+title+"&autoplay=true'");
 			iframe.css({
