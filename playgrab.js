@@ -161,7 +161,9 @@ Playgrab = {
 			position:"absolute",
 			top:0,
 			left:0,
-			zIndex:-1
+			zIndex:-1,
+			width:"100%",
+			height:"100%"
 		});
 		var img = li.find("img");
 		img.css({opacity:0});
