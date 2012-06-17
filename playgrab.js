@@ -146,6 +146,8 @@ Playgrab = {
 	},
 	rendered:{},
 	displayTrack: function(artist, title) {
+		if (artist === undefined || title === undefined) return;
+
 		if (this.rendered[artist+title]) return;
 		this.rendered[artist+title] = true;
 
