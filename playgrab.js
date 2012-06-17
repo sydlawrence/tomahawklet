@@ -137,7 +137,8 @@ Playgrab = {
 		this.element.find("h3, h4").css({
 			width:"100%",
 			textOverflow:"ellipsis",
-			overflow:"hidden"
+			overflow:"hidden",
+			whiteSpace:"nowrap"
 
 		});
 		this.element.find("h4").css({
