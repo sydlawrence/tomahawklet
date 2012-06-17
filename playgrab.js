@@ -128,6 +128,7 @@ Playgrab = {
 		$closer.css({
 			position:"fixed",
 			top:0,
+			cursor:"pointer",
 			left:274,
 			padding:"5px 10px",
 			background:"#f00",
