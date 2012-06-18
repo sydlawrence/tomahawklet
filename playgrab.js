@@ -225,7 +225,7 @@ Playgrab = {
 		if (artist === null || title === null) return;
 
 		if (this.rendered[artist+title]) return;
-		this.rendered[artist+title] = {artist:artist, title:title}};
+		this.rendered[artist+title] = {artist:artist, title:title};
 
 		this.form.append("<input type='hidden' name='artists[]' value='"+artist+"' />");
 		this.form.append("<input type='hidden' name='titles[]' value='"+title+"' />");
