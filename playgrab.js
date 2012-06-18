@@ -166,9 +166,7 @@ Playgrab = {
             float:"right",
             marginLeft:10,
             cursor:"pointer"
-        }).click(function() {
-        	alert("build playlist");
-        });
+        })
 		
 		header.append(createPlaylist).append(logo);
 		
@@ -203,7 +201,7 @@ Playgrab = {
             //http://toma.hk/playlistgen.php?title={PLAYLIST_TITLE}&artists[]={ARTIST_ONE}&titles[]={TITLE_ONE}&artists[]={ARTIST_TWO}&titles[]={TITLE_TWO}
 
 	generateForm: function() {
-		this.form = $("<form method='post' action='http://stage.toma.hk/playlistgen.php'/>");
+		this.form = $("<form method='post' target='_blank' action='http://stage.toma.hk/playlistgen.php'/>");
 		this.form.append("<input type='hidden' name='title' value='"+window.document.title+"' />");
 		this.form.append("<input type='image' height=20 src='https://github.com/sydlawrence/tomahawklet/raw/master/playlist-icon.png' alt='Create a playlit from this page' title='Create a playlit from this page' />");
 
