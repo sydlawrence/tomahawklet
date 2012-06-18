@@ -22,7 +22,7 @@ Playgrub.source.scrape = function() {
 
 		text = text.split(" - ");
 		var artist = text[text.length-1];
-		text.splice(0,text.length-1);
+		text.splice(text.length-1, 1);
 
 		var title = text.join(" - ");
 
