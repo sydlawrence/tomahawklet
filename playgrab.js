@@ -152,7 +152,8 @@ Playgrab = {
             height:20,
             display:"block",
             float:"left",
-            marginRight:10
+            marginRight:10,
+            cursor:"pointer"
         }).click(function() {
         	window.location = "http://toma.hk/";
         });
@@ -163,13 +164,16 @@ Playgrab = {
             height:20,
             display:"block",
             float:"right",
-            marginLeft:10
+            marginLeft:10,
+            cursor:"pointer"
+        }).click(function() {
+        	alert("build playlist");
         });
 		
 		header.append(createPlaylist).append(logo);
 		
 		this.element.append(this.loading);
-		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:30px;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;'/>")
+		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:30px;left:0;bottom:0;overflow-y:auto;padding:0px;background:#252727;color:#1a1a1a;border-right:1px solid #ff0000;'/>")
 		this.div.append(this.element);
 		var that = this;
 		var $closer = $("<div>Close</div>");
@@ -177,7 +181,7 @@ Playgrab = {
 			position:"fixed",
 			top:0,
 			cursor:"pointer",
-			left:274,
+			left:278,
 			padding:"5px 10px",
 			background:"#f00",
 			color:"#fff",
@@ -259,7 +263,7 @@ Playgrab = {
 		li.find('a').click(function(e) {
 			e.preventDefault();
 			$('.tomahk-iframe').remove();
-			var iframe = $("<iframe style='border:none;position:fixed;top:20px;left:0;z-index:9999999;' class='tomahk-iframe' width=274 height=274 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
+			var iframe = $("<iframe style='border:none;position:fixed;top:30px;left:0;z-index:9999999;' class='tomahk-iframe' width=274 height=274 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
 			var closer = $("<span class='tomahk-iframe'>x</span>");
 			closer.css({
 				position:"fixed",
