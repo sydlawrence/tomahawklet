@@ -159,7 +159,7 @@ Playgrab = {
 		
 		this.element.append(this.loading);
 		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:30px;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;'/>")
-		this.div.append(this.element).append(header);
+		this.div.append(this.element);
 		var that = this;
 		var $closer = $("<div>Close</div>");
 		$closer.css({
@@ -181,7 +181,7 @@ Playgrab = {
 		})
 
 		$('body').animate({paddingLeft:274}, 500);
-		$('body').append(this.div).append($closer);
+		$('body').append(this.div).append($closer).append(header);
 	},
 	rendered:{},
 	displayTrack: function(artist, title) {
