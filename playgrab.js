@@ -143,7 +143,7 @@ Playgrab = {
 		  padding:5,
 		  position:"fixed",
 		  left:0,
-		  right:0,
+		  width:268,
 		  top:0
 		});
 		
@@ -158,7 +158,7 @@ Playgrab = {
 		header.append(createPlaylist);
 		
 		this.element.append(this.loading);
-		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:30;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;'/>")
+		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:30px;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;'/>")
 		this.div.append(this.element).append(header);
 		var that = this;
 		var $closer = $("<div>Close</div>");
@@ -247,11 +247,11 @@ Playgrab = {
 		li.find('a').click(function(e) {
 			e.preventDefault();
 			$('.tomahk-iframe').remove();
-			var iframe = $("<iframe style='border:none;position:fixed;top:0;left:0;z-index:9999999;' class='tomahk-iframe' width=274 height=274 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
+			var iframe = $("<iframe style='border:none;position:fixed;top:20px;left:0;z-index:9999999;' class='tomahk-iframe' width=274 height=274 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
 			var closer = $("<span class='tomahk-iframe'>x</span>");
 			closer.css({
 				position:"fixed",
-				top:10,
+				top:40,
 				zIndex:99999999,
 				left:10,
 				fontSize:"30px",
@@ -264,10 +264,10 @@ Playgrab = {
 			});
 			iframe.css({borderRight:"1px solid #f00"});
 		
-			that.div.animate({top:274});
+			that.div.animate({top:304});
 			closer.click(function() {
 				$('.tomahk-iframe').remove();
-				that.div.animate({top:0});
+				that.div.animate({top:30});
 			});
 			$('body').append(iframe).append(closer);
 		})
