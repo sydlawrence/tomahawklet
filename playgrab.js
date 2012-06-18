@@ -159,7 +159,7 @@ Playgrab = {
         });
 
 
-		var createPlaylist = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/playlist-icon.png'/>");
+		var createPlaylist = this.generateForm();
         createPlaylist.css({
             height:20,
             display:"block",
@@ -199,13 +199,37 @@ Playgrab = {
 		$('body').append(this.div).append($closer).append(header);
 	},
 	rendered:{},
+	form:undefined,
+            //http://toma.hk/playlistgen.php?title={PLAYLIST_TITLE}&artists[]={ARTIST_ONE}&titles[]={TITLE_ONE}&artists[]={ARTIST_TWO}&titles[]={TITLE_TWO}
+
+	generateForm: function() {
+		this.form = $("<form method='post' action='http://stage.toma.hk/playlistgen.php'/>");
+		this.form.append("<input type='hidden' name='title' value='"+window.document.title+"' />");
+		this.form.append("<input type='image' src='https://github.com/sydlawrence/tomahawklet/raw/master/playlist-icon.png' alt='Create a playlit from this page' title='Create a playlit from this page' />");
+
+		for ( i in this.rendered) {
+			var obj = this.rendered[i];
+			this.form.append("<input type='hidden' name='artists[]' value='"+obj.artist+"' />");
+			this.form.append("<input type='hidden' name='titles[]' value='"+obj.title+"' />");
+
+		}
+
+
+		return this.form;
+
+
+	},
 	displayTrack: function(artist, title) {
 		if (artist === undefined || title === undefined) return;
 		if (artist === "undefined" || title === "undefined") return;
 		if (artist === null || title === null) return;
 
 		if (this.rendered[artist+title]) return;
-		this.rendered[artist+title] = true;
+		this.rendered[artist+title] = {artist:artist, title:title}};
+
+		this.form.append("<input type='hidden' name='artists[]' value='"+artist+"' />");
+		this.form.append("<input type='hidden' name='titles[]' value='"+title+"' />");
+
 
 		var track = new Track({
 			title:title,
