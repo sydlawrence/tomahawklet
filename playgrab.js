@@ -134,9 +134,32 @@ Playgrab = {
 			fontSize:"30",
 			fontWeight:"bold"
 		})
+		
+		
+		var header = $("<header/>");
+		header.css({
+		  background:'#1a1a1a',
+		  height:20,
+		  padding:5
+		  position:"fixed",
+		  left:0,
+		  right:0,
+		  top:0
+		});
+		
+		var createPlaylist = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/playlist-icon.png'/>");
+        createPlaylist.css({
+            height:20,
+            display:block,
+            float:right,
+            marginLeft:10
+        });
+		
+		header.append(createPlaylist);
+		
 		this.element.append(this.loading);
-		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:0;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;'/>")
-		this.div.append(this.element);
+		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:30;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;'/>")
+		this.div.append(this.element).append(header);
 		var that = this;
 		var $closer = $("<div>Close</div>");
 		$closer.css({
@@ -299,4 +322,3 @@ script.onload = function() {
 	},500);
 }
 script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';
-
