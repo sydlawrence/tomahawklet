@@ -140,13 +140,24 @@ Playgrab = {
 		header.css({
 		  background:'#1a1a1a',
 		  height:20,
-		  padding:5,
+		  padding:"5px 10px",
 		  position:"fixed",
 		  left:0,
 		  width:268,
 		  top:0
 		});
-		
+
+		var logo = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/tomahk_logo.png'/>");
+		logo.css({
+            height:20,
+            display:"block",
+            float:"left",
+            marginRight:10
+        }).click(function() {
+        	window.location = "http://toma.hk/";
+        });
+
+
 		var createPlaylist = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/playlist-icon.png'/>");
         createPlaylist.css({
             height:20,
@@ -155,7 +166,7 @@ Playgrab = {
             marginLeft:10
         });
 		
-		header.append(createPlaylist);
+		header.append(createPlaylist).append(logo);
 		
 		this.element.append(this.loading);
 		this.div = $("<div  style='position:fixed;z-index:999999;width:278px;top:30px;left:0;bottom:0;overflow-y:auto;padding:0px;background:#f1f1f1;border-right:1px solid #ff0000;'/>")
@@ -187,6 +198,7 @@ Playgrab = {
 	displayTrack: function(artist, title) {
 		if (artist === undefined || title === undefined) return;
 		if (artist === "undefined" || title === "undefined") return;
+		if (artist === null || title === null) return;
 
 		if (this.rendered[artist+title]) return;
 		this.rendered[artist+title] = true;
