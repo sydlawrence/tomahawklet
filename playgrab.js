@@ -2,6 +2,7 @@ var SCRAPERS = [
 	'rdf',	
 	'8tracks.com',	
 	'absoluteradio.co.uk',	
+	'amazon.com',	
 	'apple.com',
 	'bbc.co.uk',	
 	'billboard.com',
