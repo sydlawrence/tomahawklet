@@ -8,7 +8,7 @@
  *
  * This scraper will work on Vevo pages.
  */
-Playgrub.source.url = 'http://.*\.vevo.com/watch.*';
+Playgrub.source.url = 'http://.*.vevo.com/watch.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 
 Playgrub.source.scrape = function() {
@@ -20,7 +20,7 @@ Playgrub.source.scrape = function() {
      
         if (artist && song) {
             Playgrub.playlist.add_track(artist, song);
-        
+       	} 
     });
 }
 
