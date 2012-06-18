@@ -140,7 +140,7 @@ Playgrab = {
 		header.css({
 		  background:'#1a1a1a',
 		  height:20,
-		  padding:"5px 10px",
+		  padding:"5px 20px",
 		  position:"fixed",
 		  left:0,
 		  width:268,
