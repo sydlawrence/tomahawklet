@@ -24,6 +24,8 @@ Playgrub.source.scrape = function() {
 		var artist = text[text.length-1];
 		text.splice(0,text.length-1);
 
+		var title = text.join(" - ");
+
 		if (artist !== "" && title !== "")
         	Playgrab.insertAddButton($(this),artist,title);
 
