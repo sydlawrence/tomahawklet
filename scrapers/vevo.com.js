@@ -13,9 +13,9 @@ Playgrub.source.error = 'Sorry, no tracks were found.'
 
 Playgrub.source.scrape = function() {
 
-    $('div.playlist-title').each(function() {
-        var artist = $(this).find('div.channel-playlist-area > a:first-child').text();
-        var song = $(this).find('div.video-info').text();
+    $('.player-caption .title').each(function() {
+        var artist = $(this).find('.artists').text();
+        var song = $(this).find('.songname').text();
 
      
         if (artist && song) {
