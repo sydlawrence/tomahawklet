@@ -150,8 +150,8 @@ Playgrab = {
 		var createPlaylist = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/playlist-icon.png'/>");
         createPlaylist.css({
             height:20,
-            display:block,
-            float:right,
+            display:"block",
+            float:"right",
             marginLeft:10
         });
 		
