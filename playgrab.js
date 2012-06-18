@@ -207,6 +207,10 @@ Playgrab = {
 		this.form.append("<input type='hidden' name='title' value='"+window.document.title+"' />");
 		this.form.append("<input type='image' height=20 src='https://github.com/sydlawrence/tomahawklet/raw/master/playlist-icon.png' alt='Create a playlit from this page' title='Create a playlit from this page' />");
 
+		this.form.append("<input type='hidden' name='save' value='true' />");
+		this.form.append("<input type='hidden' name='redirect' value='true' />");
+
+
 		for ( i in this.rendered) {
 			var obj = this.rendered[i];
 			this.form.append("<input type='hidden' name='artists[]' value='"+obj.artist+"' />");
