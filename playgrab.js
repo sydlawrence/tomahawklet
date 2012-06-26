@@ -308,7 +308,7 @@ Playgrab = {
 				padding:"5px 5px 15px 5px",
 				background:"#3a3a3a",
 				color:"#ffffff"
-			});
+			}).css("font-family", "Helvetica, arial, sans-serif");
 			iframe.css({borderRight:"1px solid #f00"});
 		
 			that.div.animate({top:304});
