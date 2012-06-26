@@ -199,7 +199,7 @@ Playgrab = {
 			that.div.remove();
 			$(this).remove();
 			if ($('.iframe-tomahk').length > 0) {
-				$('.iframe-tomahk').css("border", "20px solid rgba(0,0,0,0.6)");
+				$('.iframe-tomahk').css("border-bottom", "20px solid rgba(0,0,0,0.6)").css("border-right", "20px solid rgba(0,0,0,0.6)").css("top",0);
 			}
 			header.remove();
 			$('body').animate({paddingLeft:0});
