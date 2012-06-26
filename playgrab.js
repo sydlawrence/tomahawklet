@@ -146,7 +146,7 @@ Playgrab = {
 		  background:'#1a1a1a',
 		  height:20,
 		  padding:"5px 20px",
-		  position:"absolute",
+		  position:"fixed",
 		  left:0,
 		  width:238,
 		  top:0
@@ -197,6 +197,7 @@ Playgrab = {
 		$closer.click(function() {
 			that.div.remove();
 			$(this).remove();
+			$(header).remove();
 			$('body').animate({paddingLeft:0});
 		})
 
