@@ -146,7 +146,7 @@ Playgrab = {
 		  background:'#1a1a1a',
 		  height:20,
 		  padding:"5px 20px",
-		  position:"fixed",
+		  position:"absolute",
 		  left:0,
 		  width:238,
 		  top:0
