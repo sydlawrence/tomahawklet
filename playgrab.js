@@ -32,6 +32,7 @@ var SCRAPERS = [
 	'mymusiclists.com',
 	'napster.com',
 	'nme.com',
+	'npr.com',
 	'pitchfork.com',
 	'playbyaol.com',
 	'playlick.com',
