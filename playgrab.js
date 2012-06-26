@@ -81,6 +81,7 @@ Playgrab = {
 	},
 	source: {
 		set_url: function(url) {
+			this.url = url;
 			var bool = Playgrab.checkUrl(url);
 			if (bool) this.url = url;
 			return bool
