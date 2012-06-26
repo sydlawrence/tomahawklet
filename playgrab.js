@@ -187,6 +187,8 @@ Playgrab = {
 			left:278,
 			padding:"5px 10px",
 			background:"#f00",
+			fontFamily:"helvetica, arial, sans-serif",
+
 			color:"#fff",
 			fontWeight:"bold",
 			fontSize:"14px",
