@@ -117,7 +117,7 @@ Playgrab = {
 		creator: "",
 		tracks: [],
 		add_track: function(artist,title) {
-			if (artist !== undefined && title !== undefined)
+			if (artist !== undefined && title !== undefined && artist !== null && title !== null && artist !== "" && title !== "")
 				Playgrab.displayTrack(artist, title);
 		},
 		remove_track: function(index) {
