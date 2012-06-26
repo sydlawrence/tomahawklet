@@ -315,10 +315,10 @@ Playgrab = {
 
 			that.div.animate({top:304});
 			closer.click(function() {
+				iframe.attr("src", url);
 
 				$('.tomahk-iframe').remove();
 				that.div.animate({top:30});
-				iframe.attr("src", url);
 			});
 			$('body').append(iframe).append(closer);
 		})
