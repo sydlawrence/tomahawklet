@@ -322,7 +322,7 @@ Playgrab = {
 
 			that.div.animate({top:304});
 			closer.click(function() {
-				$('.tomahk-iframe').remove();
+				$('.tomahk-iframe, .iframe-tomahk').remove();
 				that.div.animate({top:30});
 			});
 			$('body').append(iframe).append(closer);
