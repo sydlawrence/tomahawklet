@@ -305,6 +305,7 @@ Playgrab = {
 				left:10,
 				fontSize:"30px",
 				fontWeight:"bold",
+				cursor:"pointer",
 				fontFamily:"helvetica, arial, sans-serif",
 				display:"block",
 				padding:"5px 5px 15px 5px",
