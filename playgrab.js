@@ -294,7 +294,7 @@ Playgrab = {
 		li.find('a').click(function(e) {
 			e.preventDefault();
 			$('.tomahk-iframe').remove();
-			var iframe = $("<iframe style='border:none;position:fixed;top:30px;left:0;z-index:9999999;' class='tomahk-iframe' width=274 height=274 src=''></iframe>");
+			var iframe = $("<iframe style='border:none;position:fixed;top:30px;left:0;z-index:9999999;' class='tomahk-iframe' width=274 height=274 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
 			var closer = $("<span class='tomahk-iframe'>x</span>");
 			closer.css({
 				position:"fixed",
@@ -311,18 +311,15 @@ Playgrab = {
 			}).css("font-family", "Helvetica, arial, sans-serif");
 			iframe.css({borderRight:"1px solid #f00"});
 		
-			var url = "http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true";
 
 			that.div.animate({top:304});
 			closer.click(function() {
-				iframe.attr("src", url);
-
 				$('.tomahk-iframe').remove();
 				that.div.animate({top:30});
 			});
 			$('body').append(iframe).append(closer);
 		})
-		li.tooltip();
+		li.attr("title", li.attr("title").replace("<br/>", " - "));
 		return;
 
 
