@@ -366,7 +366,7 @@ script.onload = function() {
 		document.getElementsByTagName('head')[0].appendChild(script);
 		script.src = 'http://stage.toma.hk/js/bootstrap/bootstrap-tooltip.js';
 		script.onload = function() {
-			$('li.cover title').tooltip();
+			$('li.cover').tooltip();
 		}
 	},500);
 }
