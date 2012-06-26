@@ -360,12 +360,14 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 script.onload = function() {
 	var t = setTimeout(function() {
+		Playgrub.init();
 		var script = document.createElement('script');
 		script.type = 'text/javascript';
 		document.getElementsByTagName('head')[0].appendChild(script);
 		script.src = 'http://stage.toma.hk/js/bootstrap/bootstrap-tooltip.js';
-
-		Playgrub.init();
+		script.onload = function() {
+			$('li.cover title').tooltip();
+		}
 	},500);
 }
 script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';
