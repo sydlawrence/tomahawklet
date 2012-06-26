@@ -322,6 +322,7 @@ Playgrab = {
 			});
 			$('body').append(iframe).append(closer);
 		})
+		li.tooltip();
 		return;
 
 
