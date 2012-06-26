@@ -148,6 +148,7 @@ Playgrab = {
 		  padding:"5px 20px",
 		  position:"fixed",
 		  left:0,
+		  zIndex:99999999999,
 		  width:238,
 		  top:0
 		});
