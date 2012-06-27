@@ -19,6 +19,8 @@ if(Playgrub.source.set_url('http://www.bbc.co.uk/radio1/chart/*')) {
     }
 }
 
+Playgrub.source.start();
+
 /**
  * BBC Playlist Playgrub Scraper
  * Created by: Lucas Gonze
@@ -46,6 +48,8 @@ if(Playgrub.source.set_url('http://www\.bbc\.co\.uk/programmes/*')) {
     }
 }
 
+
+Playgrub.source.start();
 /**
  * BBC Radio 1 Playlist Scraper
  * Created by: JP Hastings-Spital & Lucas Gonze
@@ -65,6 +69,9 @@ if(Playgrub.source.set_url('http://www.bbc.co.uk/radio1/playlist/')) {
         });
     }
 }
+
+
+Playgrub.source.start();
 
 /**
  * BBC Radio 2 Playlist Scraper
