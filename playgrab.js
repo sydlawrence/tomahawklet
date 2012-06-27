@@ -291,7 +291,7 @@ Playgrab = {
 		})
 
 		$('body').animate({paddingLeft:274}, 500);
-		$('body').append(this.div).append($closer).append(header);
+		$('body').append(this.div).append($closer).append($opener).append(header);
 	},
 	rendered:{},
 	form:undefined,
