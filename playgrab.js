@@ -274,7 +274,7 @@ Playgrab = {
 					borderRadius:"0",
 					borderRight:"1px solid red"
 				}).stop().animate({
-					top:50,
+					top:30,
 					width:278,
 					height:278
 				})[0].onhover = function(){};
