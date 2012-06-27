@@ -349,7 +349,14 @@ Playgrab = {
 		this.display();
 //		Playgrab.source.start();
 		for (var i = 0; i < SCRAPERS.length;i++) {
-			Playgrab.addScraper(SCRAPERS[i]);	
+			var scraper = SCRAPERS[i];
+			var scraperTest = scraper.split(".");
+			if (scraperTest.length === 1) {
+				Playgrab.addScraper(scraper);	
+			}
+			else if (this.checkUrl(scraper)) {
+				Playgrab.addScraper(scraper);	
+			}
 		}
 	}
 }
