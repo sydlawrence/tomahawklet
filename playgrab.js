@@ -399,7 +399,7 @@ Playgrab = {
 				zIndex:99999999,
 				left:10,
 				fontSize:"20px",
-				lineHeight:30,
+				lineHeight:"30px",
 				fontWeight:"bold",
 				cursor:"pointer",
 				fontFamily:"helvetica, arial, sans-serif",
