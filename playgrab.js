@@ -351,7 +351,7 @@ Playgrab = {
 			iframe.css({borderRight:"1px solid #f00"});
 		
 
-			that.div.animate({top:304});
+			that.div.animate({top:308});
 			closer.click(function() {
 				$('.tomahk-iframe, .iframe-tomahk').remove();
 				that.div.animate({top:30});
