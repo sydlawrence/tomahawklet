@@ -1,5 +1,6 @@
 var SCRAPERS = [
 	'rdf',	
+	'default',
 	'8tracks.com',	
 	'absoluteradio.co.uk',	
 	'amazon.com',	
@@ -7,7 +8,7 @@ var SCRAPERS = [
 	'bbc.co.uk',	
 	'billboard.com',
 	'blip.fm',
-	'default',
+	'drownedinsound.com',
 	'everyhit.com',
 	'ex.fm',
 	'fiql.com',
