@@ -380,7 +380,7 @@ Playgrab = {
 		var that = this;
 		li.find('a').click(function(e) {
 			e.preventDefault();
-			$('.tomahk-iframe').remove();
+			$('.tomahk-iframe, .iframe-tomahk').remove();
 			var iframe = $("<iframe class='iframe-tomahk' scrolling='no' style='border:none;position:fixed;top:30px;left:0;z-index:9999999;' class='tomahk-iframe' width=278 height=278 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
 			var closer = $("<span class='tomahk-iframe'>x</span>");
 			closer.css({
@@ -399,8 +399,7 @@ Playgrab = {
 			}).css("font-family", "Helvetica, arial, sans-serif");
 			iframe.css({borderRight:"1px solid #f00"});
 			window.iframe = iframe;
-			var ifr = iframe[0];
-			var iframeDoc = ifr.contentDocument || ifr.contentWindow.document
+			var iframeDoc = iframe[0].contentDocument || iframe[0].contentWindow.document
 			$(iframeDoc).on("songEnded", function() {
 				alert("hi");
 			})
