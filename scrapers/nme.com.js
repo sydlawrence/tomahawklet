@@ -20,7 +20,7 @@ Playgrub.source.scrape = function() {
 	});
 
 	$(".review").each(function () {
-		var str = $(this).find('.title');
+		var str = $(this).find('.title').html();
 		str = str.split(" - ");
 		if (str.length < 2) return;
 		var artist = str[1];
