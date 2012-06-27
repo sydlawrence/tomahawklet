@@ -33,6 +33,9 @@ Playgrub.source.scrape = function() {
         	uri = uri.split("=");
         	uri = uri[1];
 
+        	uri = decodeURI(uri);
+
+        	console.log(uri);
 
         	var url = uri+"?consumer_key=TiNg2DRYhBnp01DA3zNag&format=json&callback=?";
 
