@@ -8,7 +8,7 @@
  * This scraper will work on any Last.fm song page and only add unique songs.
  */
 
-Playgrub.source.url = 'http://widgets\.grooveshark\.com/add_songs.*';
+Playgrub.source.url = 'grooveshark.com';
 Playgrub.source.error = "To use Tomahawklet on Grooveshark export a song list, choose \"Mirror Changes\" or \"Copy Songs\", scroll down and hit \"Next Step\", then use the bookmarklet.";
 Playgrub.source.scrape = function() {
     $("h4").each(function () {
