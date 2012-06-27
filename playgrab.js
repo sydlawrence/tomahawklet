@@ -203,6 +203,9 @@ Playgrab = {
 		});
 		$closer.click(function() {
 			that.div.animate({left:-300});
+			header.animate({left:-300});
+
+
 			$(this).hide();
 			that.open = false;
 			if ($('.iframe-tomahk').length > 0) {
@@ -238,7 +241,6 @@ Playgrab = {
 				
 				$('.tomahk-iframe').animate({top:180}).css("font-size", 10).css("line-height","10px");
 			}
-			header.remove();
 			$('body').animate({paddingLeft:0});
 		});
 
@@ -260,6 +262,7 @@ Playgrab = {
 		});
 		$opener.click(function() {
 			that.div.animate({left:0});
+			header.animate({left:0});
 			$closer.show();
 			$(this).hide();
 			that.open = true;
