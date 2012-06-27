@@ -2,6 +2,7 @@ var SCRAPERS = [
 	'rdf',	
 	'default',
 	'spotembeds',
+	'soundcloudembed',
 
 
 	'8tracks.com',	
