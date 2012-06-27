@@ -206,14 +206,26 @@ Playgrab = {
 				.css("border-right", "0px solid rgba(0,0,0,0.6)");
 
 				$('.iframe-tomahk').css({
-					borderTop:"20px solid rgba(0,0,0,0.7)",
+					borderTop:"10px solid rgba(0,0,0,0.7)",
 					borderRadius:"0 10px 10px 0",
-					borderBottom:"20px solid rgba(0,0,0,0.7)",
-					borderRight:"20px solid rgba(0,0,0,0.7)"
+					borderBottom:"10px solid rgba(0,0,0,0.7)",
+					borderRight:"10px solid rgba(0,0,0,0.7)"
 				}).animate({
 					top:150,
-					width:75,
-					height:75
+					width:100,
+					height:100
+				}).hover(function() {
+					$(this).animate({
+						top:100,
+						width:200,
+						height:200
+					});	
+				}, function() {
+					$(this).animate({
+						top:150,
+						width:100,
+						height:100
+					});	
 				});
 
 
