@@ -398,7 +398,12 @@ Playgrab = {
 				color:"#ffffff"
 			}).css("font-family", "Helvetica, arial, sans-serif");
 			iframe.css({borderRight:"1px solid #f00"});
-		
+
+			var ifr = iframe[0];
+			var iframeDoc = ifr.contentDocument || ifr.contentWindow.document
+			$(iframeDoc).on("songEnded", function() {
+				alert("hi");
+			})
 
 			that.div.animate({top:308});
 			closer.click(function() {
