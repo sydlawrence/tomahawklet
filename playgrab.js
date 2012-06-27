@@ -199,7 +199,16 @@ Playgrab = {
 			that.div.remove();
 			$(this).remove();
 			if ($('.iframe-tomahk').length > 0) {
-				$('.iframe-tomahk').css("border-bottom", "20px solid rgba(0,0,0,0.6)").css("border-right", "20px solid rgba(0,0,0,0.6)").css("top",0);
+				$('.iframe-tomahk').css("border-bottom", "0px solid rgba(0,0,0,0.6)")
+				.css("border-right", "0px solid rgba(0,0,0,0.6)");
+
+				$('.iframe-tomahk').animate({
+					borderBottom:"20px solid rgba(0,0,0,0.6)",
+					borderRight:"20px solid rgba(0,0,0,0.6)",
+					top:0
+				});
+				
+				$('.tomahk.iframe').animate({top:10});
 			}
 			header.remove();
 			$('body').animate({paddingLeft:0});
