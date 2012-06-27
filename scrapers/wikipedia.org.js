@@ -20,58 +20,12 @@ Playgrub.source.error = 'Sorry, any songs mentioned on this page aren\'t in the 
 
 Playgrub.source.scrape = function() {
 	// Tables
-	$("table.wikitable").each(function () {
-		var artist_column = -1;
-		var title_column = -1;
-		
-		var doHeader = true;
-		$(this).find("tr").each(function () {
-			var i = 0;
-			if (doHeader) {
-				$(this).find('th').each(function () {
-					switch($(this).text().trim()) {
-					case 'Artist':
-						artist_column = i;
-						break;
-					case 'Song title':	
-					case 'Single':
-					case 'Song':
-					case 'Title':
-						title_column = i;
-						break;
-					}
-					
-					i += 1;
-				});
-				doHeader = false;
-			} else {
-				if( (artist_column * title_column) >= 0) {
-					var cols = $(this).find('td');
-					var mod = $(this).find('th').length;
-					var artist = cols.eq(artist_column - mod).text();
-					// I don't like stripping speech marks like this, but I want a quick way of dealing with "Blah" / "Blooh" type entries.
-					var title = cols.eq(title_column - mod).text().replace(/"/g,'');
-					if( artist && title && artist != "" && title != "")
-				    	Playgrub.playlist.add_track(artist,title);
-				}
-			}
-		});
-    });
 
-	// Lists
-	$("li").each(function () {
-		var match = $(this).text().match(/"(.+)" by (.+)/);
-		if (match) {
-			var artist = match[2];
-			var title = match[1];
-		} else {
-			var match = $(this).text().match(/(.+) - "(.+)"/);
-			if (match) {
-				var artist = match[1];
-				var title = match[2];
-			}
-		}
-		
+	var artist = $('.contributor a').html();
+	$(".tracklist tr:not(:nth-child(1)), .tracklist tr:not(:nth-child(2))").each(function () {
+	
+		var title = $(this).find('td:nth-child(2) a').first().html();
+
 		if( artist && title && artist != "" && title != "")
 			Playgrub.playlist.add_track(artist,title);
 	});
