@@ -19,7 +19,17 @@ Playgrub.source.scrape = function() {
 	}
 
 	processTrack = function(track) {
-
+		var title = track.title.split(" - ");
+		
+		if (title.length === 1) {
+			title = title[0];
+			var artist = track.user.username;
+		} else {
+			var artist = title[0];
+			title = title[1];
+		}
+	
+		Playgrub.playlist.add_track(artist,title);
 	}
 
     $('iframe').each(function() {
@@ -42,22 +52,16 @@ Playgrub.source.scrape = function() {
         	//var url = "http://spotikea.tomahawk-player.org/browse/"+uri;
         	//url = "http://stage.toma.hk/proxy.php?url="+encodeURIComponent(url)+"&callback=?";
         	$.getJSON(url, function(data){
-
+        		console.log(url);
+        		console.log(data);
         		if (data.kind === "track") {
 
-        			var title = data.title.split(" - ");
-        			
-        			if (title.length === 1) {
-        				title = title[0];
-        				var artist = data.user.username;
-        			} else {
-        				var artist = title[0];
-        				title = title[1];
+        			processTrack(data);
+        		
+        		} if (data.kind === "playlist") {
+        			for (var i = 0; i < data.tracks.length; i++) {
+        				processTrack(data.tracks[i]);
         			}
-
-		    	
-		    		Playgrub.playlist.add_track(artist,title);
-
         		}
         	})
         	
