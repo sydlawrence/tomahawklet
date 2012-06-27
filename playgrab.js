@@ -298,7 +298,7 @@ Playgrab = {
             //http://toma.hk/playlistgen.php?title={PLAYLIST_TITLE}&artists[]={ARTIST_ONE}&titles[]={TITLE_ONE}&artists[]={ARTIST_TWO}&titles[]={TITLE_TWO}
 
 	generateForm: function() {
-		this.form = $("<form method='post' target='_blank' action='http://stage.toma.hk/playlistgen.php'/>");
+		this.form = $("<form method='post' target='_blank' action='http://toma.hk/playlistgen.php'/>");
 		this.form.append("<input type='hidden' name='title' value='"+window.document.title+"' />");
 		this.form.append("<input type='image' height=20 src='https://github.com/sydlawrence/tomahawklet/raw/master/playlist-icon.png' alt='Create a playlist from this page' title='Create a playlist from this page' />");
 
@@ -391,7 +391,7 @@ Playgrab = {
 		li.find('a').click(function(e) {
 			e.preventDefault();
 			$('.tomahk-iframe, .iframe-tomahk').remove();
-			var iframe = $("<iframe class='iframe-tomahk' scrolling='no' style='border:none;position:fixed;top:30px;left:0;z-index:9999999;' class='tomahk-iframe' width=278 height=278 src='http://stage.toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
+			var iframe = $("<iframe class='iframe-tomahk' scrolling='no' style='border:none;position:fixed;top:30px;left:0;z-index:9999999;' class='tomahk-iframe' width=278 height=278 src='http://toma.hk/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
 			var closer = $("<span class='tomahk-iframe'>x</span>");
 			closer.css({
 				position:"fixed",
@@ -465,17 +465,17 @@ var Playgrub = Playgrab;
 var script = document.createElement('script');
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-script.src = 'http://stage.toma.hk/js/classes/Artist.js';
+script.src = 'http://toma.hk/js/classes/Artist.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-script.src = 'http://stage.toma.hk/js/classes/Track.js';
+script.src = 'http://toma.hk/js/classes/Track.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-script.src = 'http://stage.toma.hk/js/classes/Album.js';
+script.src = 'http://toma.hk/js/classes/Album.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
@@ -487,7 +487,7 @@ script.onload = function() {
 		var script = document.createElement('script');
 		script.type = 'text/javascript';
 		document.getElementsByTagName('head')[0].appendChild(script);
-		script.src = 'http://stage.toma.hk/js/bootstrap/bootstrap-tooltip.js';
+		script.src = 'http://toma.hk/js/bootstrap/bootstrap-tooltip.js';
 		script.onload = function() {
 			$('li.cover').tooltip();
 		}
