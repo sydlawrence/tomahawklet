@@ -8,7 +8,7 @@
  *
  * This scraper will work on Ex.fm profile pages.
  */
-Playgrub.source.url = 'http://.*\.ex.fm.*';
+Playgrub.source.url = 'http://.*.ex.fm.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
 
