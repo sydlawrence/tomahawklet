@@ -230,7 +230,7 @@ Playgrab = {
 
 
 				
-				$('.tomahk-iframe').animate({top:180});
+				$('.tomahk-iframe').animate({top:180}).css("font-size", 10).css("line-height",10);
 			}
 			header.remove();
 			$('body').animate({paddingLeft:0});
