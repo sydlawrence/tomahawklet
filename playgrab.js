@@ -61,6 +61,7 @@ Playgrab = {
 	insertAddButton: function(element,artist, title ) {
 		this.displayTrack(artist, title);
 	},
+	open:true,
 	savePlaylist: function() {
 
 	},
@@ -203,6 +204,7 @@ Playgrab = {
 		$closer.click(function() {
 			that.div.animate({left:-300});
 			$(this).hide();
+			that.open = false;
 			if ($('.iframe-tomahk').length > 0) {
 				$('.iframe-tomahk').css("border-bottom", "0px solid rgba(0,0,0,0.6)")
 				.css("border-right", "0px solid rgba(0,0,0,0.6)");
@@ -217,12 +219,14 @@ Playgrab = {
 					width:100,
 					height:100
 				}).hover(function() {
+					if (that.open) return;
 					$(this).stop().animate({
 						top:100,
 						width:200,
 						height:200
 					});	
 				}, function() {
+					if (that.open) return;
 					$(this).stop().animate({
 						top:150,
 						width:100,
@@ -258,6 +262,7 @@ Playgrab = {
 			that.div.animate({left:0});
 			$closer.show();
 			$(this).hide();
+			that.open = true;
 			if ($('.iframe-tomahk').length > 0) {
 				$('.iframe-tomahk').css("border", "0");
 
