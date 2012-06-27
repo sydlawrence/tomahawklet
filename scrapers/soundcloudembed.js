@@ -43,8 +43,15 @@ Playgrub.source.scrape = function() {
         		if (data.kind === "track") {
 
         			var title = data.title.split(" - ");
-        			var artist = title[0];
-        			title = title[1];
+        			
+        			if (title.length === 1) {
+        				title = title[0];
+        				var artist = data.user.username;
+        			} else {
+        				var artist = title[0];
+        				title = title[1];
+        			}
+
 		    	
 		    		Playgrub.playlist.add_track(artist,title);
 
