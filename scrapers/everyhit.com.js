@@ -12,8 +12,8 @@ Playgrub.source.error = 'Sorry, there aren\'t any appropriate song names here.';
 Playgrub.source.scrape = function() {
 	$("#retrochart tr").each(function () {
 		if ($(this).find('td').length == 3) {
-			var artist = $(this).find('td').eq(1).text();
-			var title = $(this).find('td').eq(2).text();
+			var artist = $(this).find('td:nth-child(2)').text();
+			var title = $(this).find('td:nth-child(3)').text();
 			if( artist && title && artist != "" && title != "")
 		    	Playgrub.playlist.add_track(artist,title);
 		}
