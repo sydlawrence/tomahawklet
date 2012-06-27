@@ -257,9 +257,9 @@ Playgrab = {
 		$opener.click(function() {
 			that.div.animate({left:0});
 			$closer.show();
+			$(this).hide();
 			if ($('.iframe-tomahk').length > 0) {
-				$('.iframe-tomahk').css("border-bottom", "0px solid rgba(0,0,0,0.6)")
-				.css("border-right", "0px solid rgba(0,0,0,0.6)");
+				$('.iframe-tomahk').css("border", "0");
 
 				$('.iframe-tomahk').css({
 					borderTop:"10px solid rgba(0,0,0,0.7)",
@@ -267,24 +267,12 @@ Playgrab = {
 					borderBottom:"10px solid rgba(0,0,0,0.7)",
 					borderRight:"10px solid rgba(0,0,0,0.7)"
 				}).stop().animate({
-					top:150,
-					width:100,
-					height:100
-				}).hover(function() {
-					$(this).stop().animate({
-						top:100,
-						width:200,
-						height:200
-					});	
-				}, function() {
-					$(this).stop().animate({
-						top:150,
-						width:100,
-						height:100
-					});	
-				});
+					top:50,
+					width:278,
+					height:278
+				})[0].onhover = function(){};
 				
-				$('.tomahk-iframe').animate({top:180}).css("font-size", 10).css("line-height","10px");
+				$('.tomahk-iframe').animate({top:180}).css("font-size", 20).css("line-height","20px");
 			}
 			header.remove();
 			$('body').animate({paddingLeft:0});
