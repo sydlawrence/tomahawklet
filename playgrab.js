@@ -138,7 +138,7 @@ Playgrab = {
 			right:0,
 			fontFamily:"Helvetica, arial, sans-serif",
 			textAlign:"center",
-			fontSize:"30px",
+			fontSize:"13px",
 			fontWeight:"bold"
 		})
 		
@@ -210,7 +210,7 @@ Playgrab = {
 					top:0
 				});
 				
-				$('.tomahk.iframe').animate({top:10});
+				$('.tomahk-iframe').animate({top:10});
 			}
 			header.remove();
 			$('body').animate({paddingLeft:0});
