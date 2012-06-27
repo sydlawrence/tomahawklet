@@ -210,18 +210,18 @@ Playgrab = {
 					borderRadius:"0 10px 10px 0",
 					borderBottom:"10px solid rgba(0,0,0,0.7)",
 					borderRight:"10px solid rgba(0,0,0,0.7)"
-				}).animate({
+				}).stop().animate({
 					top:150,
 					width:100,
 					height:100
 				}).hover(function() {
-					$(this).animate({
+					$(this).stop().animate({
 						top:100,
 						width:200,
 						height:200
 					});	
 				}, function() {
-					$(this).animate({
+					$(this).stop().animate({
 						top:150,
 						width:100,
 						height:100
