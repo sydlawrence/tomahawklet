@@ -134,9 +134,11 @@ Playgrab = {
 			position:"absolute",
 			top:0,
 			left:0,
+			color:"#fff",
 			right:0,
+			fontFamily:"Helvetica, arial, sans-serif",
 			textAlign:"center",
-			fontSize:"30",
+			fontSize:"30px",
 			fontWeight:"bold"
 		})
 		
