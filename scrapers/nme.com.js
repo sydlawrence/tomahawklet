@@ -23,8 +23,8 @@ Playgrub.source.scrape = function() {
 		var str = $(this).find('.title').html();
 		str = str.split(" - ");
 		if (str.length < 2) return;
-		var artist = str[1];
-		var title = str[2].replace('\'', "");
+		var artist = str[0];
+		var title = str[1].replace('\'', "");
 		if( artist && title && artist != "" && title != "")
 			Playgrub.playlist.add_track(artist,title);
 	});
