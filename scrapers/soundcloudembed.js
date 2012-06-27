@@ -36,8 +36,8 @@ Playgrub.source.scrape = function() {
 
         	var url = uri+"?consumer_key=TiNg2DRYhBnp01DA3zNag&format=json&callback=?";
 
-        	var url = "http://spotikea.tomahawk-player.org/browse/"+uri;
-        	url = "http://stage.toma.hk/proxy.php?url="+encodeURIComponent(url)+"&callback=?";
+        	//var url = "http://spotikea.tomahawk-player.org/browse/"+uri;
+        	//url = "http://stage.toma.hk/proxy.php?url="+encodeURIComponent(url)+"&callback=?";
         	$.getJSON(url, function(data){
 
         		if (data.kind === "track") {
