@@ -32,12 +32,9 @@ Playgrub.source.scrape = function() {
         	var uri = src[0];
         	uri = uri.split("=");
         	uri = uri[1];
-        	alert(uri);
         	var url = "http://spotikea.tomahawk-player.org/browse/"+uri;
         	url = "http://stage.toma.hk/proxy.php?url="+encodeURIComponent(url)+"&callback=?";
-        	alert(url);
         	$.getJSON(url, function(data){
-        		console.log(data);
 
         		if (data.playlist !== undefined) {
         			processPlaylist(data.playlist);

@@ -368,6 +368,11 @@ Playgrab = {
 			width:"100%",
 			textOverflow:"ellipsis",
 			overflow:"hidden",
+			background:"none",
+			textAlign:"center",
+			lineHeight:"14px",
+			padding:0,
+			margin:0,
 			whiteSpace:"nowrap",
 			textTransform:"uppercase",
 			fontFamily:"helvetica, arial, sans-serif"
