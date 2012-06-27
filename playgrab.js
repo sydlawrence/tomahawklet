@@ -1,6 +1,9 @@
 var SCRAPERS = [
 	'rdf',	
 	'default',
+	'spotembeds',
+
+
 	'8tracks.com',	
 	'absoluteradio.co.uk',	
 	'amazon.com',	
