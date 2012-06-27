@@ -206,8 +206,8 @@ Playgrab = {
 				.css("border-right", "0px solid rgba(0,0,0,0.6)");
 
 				$('.iframe-tomahk').css({
-					borderBottom:"20px solid rgba(0,0,0,0.6)",
-					borderRight:"20px solid rgba(0,0,0,0.6)"
+					borderBottom:"5px solid rgba(0,0,0,1)",
+					borderRight:"5px solid rgba(0,0,0,1)"
 				}).animate({
 					top:0
 				});
