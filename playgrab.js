@@ -395,10 +395,11 @@ Playgrab = {
 			var closer = $("<span class='tomahk-iframe'>x</span>");
 			closer.css({
 				position:"fixed",
-				top:40,
+				top:80,
 				zIndex:99999999,
 				left:10,
-				fontSize:"30px",
+				fontSize:"20px",
+				lineHeight:30,
 				fontWeight:"bold",
 				cursor:"pointer",
 				fontFamily:"helvetica, arial, sans-serif",
