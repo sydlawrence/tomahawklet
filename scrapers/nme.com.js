@@ -9,7 +9,7 @@
  *
  * To test, go to http://www.nme.com/radio/playlist
  */
-Playgrub.source.url = 'http://www.nme.com/radio/playlist';
+Playgrub.source.url = 'nme.com';
 Playgrub.source.error = 'Sorry, no suitable songs could be found';
 Playgrub.source.scrape = function() {
 	$("div.main_block table.track_list tr").each(function () {
