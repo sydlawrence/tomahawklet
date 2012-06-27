@@ -8,7 +8,7 @@
  * This scraper will work on any Y! Radish Playlist.
  */
 
-Playgrub.source.url = 'http://new\.music\.yahoo\.com/blogs/yradish/*';
+Playgrub.source.url = 'music\.yahoo\.com';
 Playgrub.source.error = 'Check your Robert Radish URL.';
 Playgrub.source.scrape = function() {
    var regex = /(^\s*[0-9]+\. )/;
@@ -20,6 +20,14 @@ Playgrub.source.scrape = function() {
             Playgrub.playlist.add_track(song_result[1], song_result[0]);
         }
     });
+
+    var artist = $('.ymusic-lastfm-artist-radio h3 a').html();
+    $('.track-title').each(function() {
+    	var title = $(this).find('.htrack').html();
+
+        Playgrub.playlist.add_track(artist, title);
+
+    })
 }
 
 Playgrub.source.start();
