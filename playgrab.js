@@ -265,6 +265,7 @@ Playgrab = {
 			header.animate({left:0});
 			$closer.show();
 			$(this).hide();
+			$('body').animate({paddingLeft:274}, 500);
 			that.open = true;
 			if ($('.iframe-tomahk').length > 0) {
 				$('.iframe-tomahk').css("border", "0");
