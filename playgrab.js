@@ -262,9 +262,11 @@ Playgrab = {
 		});
 		$opener.click(function() {
 			that.div.animate({left:0});
-			header.animate({left:0});
-			$closer.show();
-			$(this).hide();
+			header.animate({left:0}, 500, function() {
+				$closer.show();
+			});
+			
+			//$(this).hide();
 			$('body').animate({paddingLeft:274}, 500);
 			that.open = true;
 			if ($('.iframe-tomahk').length > 0) {
