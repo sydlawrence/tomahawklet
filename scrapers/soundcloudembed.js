@@ -33,7 +33,7 @@ Playgrub.source.scrape = function() {
         	uri = uri.split("=");
         	uri = uri[1];
 
-        	uri = decodeURI(uri);
+        	uri = decodeURIComponent(uri);
 
         	console.log(uri);
 
