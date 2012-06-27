@@ -398,7 +398,7 @@ Playgrab = {
 				color:"#ffffff"
 			}).css("font-family", "Helvetica, arial, sans-serif");
 			iframe.css({borderRight:"1px solid #f00"});
-
+			window.iframe = iframe;
 			var ifr = iframe[0];
 			var iframeDoc = ifr.contentDocument || ifr.contentWindow.document
 			$(iframeDoc).on("songEnded", function() {
