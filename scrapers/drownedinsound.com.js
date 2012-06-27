@@ -35,7 +35,7 @@ Playgrub.source.scrape = function() {
 
 	});
 
-	$('li img[height="42"]').each(function() {
+	$('li img[height=42]').each(function() {
 		var $this = $(this).parent();
 
 		var title = $this.find('i').html();
