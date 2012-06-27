@@ -129,6 +129,8 @@ Playgrab = {
 	div: undefined,
 	loading:undefined,
 	display: function() {
+
+
 		this.element = $("<ul style='margin:0;padding:0'/>");
 		this.loading = $("<div>Loading</div>");
 		this.loading.css({
@@ -199,8 +201,8 @@ Playgrab = {
 			zIndex:999999
 		});
 		$closer.click(function() {
-			that.div.remove();
-			$(this).remove();
+			that.div.animate({left:-300});
+			$(this).hide();
 			if ($('.iframe-tomahk').length > 0) {
 				$('.iframe-tomahk').css("border-bottom", "0px solid rgba(0,0,0,0.6)")
 				.css("border-right", "0px solid rgba(0,0,0,0.6)");
@@ -229,6 +231,58 @@ Playgrab = {
 				});
 
 
+				
+				$('.tomahk-iframe').animate({top:180}).css("font-size", 10).css("line-height","10px");
+			}
+			header.remove();
+			$('body').animate({paddingLeft:0});
+		});
+
+
+		var $opener = $("<div>Open</div>");
+		$opener.css({
+			position:"fixed",
+			top:0,
+			cursor:"pointer",
+			left:0,
+			padding:"5px 10px",
+			background:"#f00",
+			fontFamily:"helvetica, arial, sans-serif",
+
+			color:"#fff",
+			fontWeight:"bold",
+			fontSize:"14px",
+			zIndex:999999999
+		});
+		$opener.click(function() {
+			that.div.animate({left:0});
+			$closer.show();
+			if ($('.iframe-tomahk').length > 0) {
+				$('.iframe-tomahk').css("border-bottom", "0px solid rgba(0,0,0,0.6)")
+				.css("border-right", "0px solid rgba(0,0,0,0.6)");
+
+				$('.iframe-tomahk').css({
+					borderTop:"10px solid rgba(0,0,0,0.7)",
+					borderRadius:"0 10px 10px 0",
+					borderBottom:"10px solid rgba(0,0,0,0.7)",
+					borderRight:"10px solid rgba(0,0,0,0.7)"
+				}).stop().animate({
+					top:150,
+					width:100,
+					height:100
+				}).hover(function() {
+					$(this).stop().animate({
+						top:100,
+						width:200,
+						height:200
+					});	
+				}, function() {
+					$(this).stop().animate({
+						top:150,
+						width:100,
+						height:100
+					});	
+				});
 				
 				$('.tomahk-iframe').animate({top:180}).css("font-size", 10).css("line-height","10px");
 			}
