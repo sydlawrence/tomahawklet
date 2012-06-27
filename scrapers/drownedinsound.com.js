@@ -27,11 +27,13 @@ Playgrub.source.scrape = function() {
 	$('.pack_shot').each(function() {
 		var str = $(this).find('b').html();
 		str = str.split(" - ");
-		var title = str[0];
-		var artist = str[1];
+		if (str.length < 2) { } else {
+			var title = str[0];
+			var artist = str[1];
 
-		if( artist && title && artist != "" && title != "")
-	    	Playgrub.playlist.add_track(artist,title);
+			if( artist && title && artist != "" && title != "")
+		    	Playgrub.playlist.add_track(artist,title);
+	   	}
 
 	});
 
