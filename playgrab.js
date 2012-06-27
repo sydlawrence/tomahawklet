@@ -399,10 +399,14 @@ Playgrab = {
 			}).css("font-family", "Helvetica, arial, sans-serif");
 			iframe.css({borderRight:"1px solid #f00"});
 			window.iframe = iframe;
-			var iframeDoc = iframe[0].contentDocument || iframe[0].contentWindow.document
-			$(iframeDoc).on("songEnded", function() {
-				alert("hi");
+
+			iframe.load(function() {
+				var iframeDoc = iframe[0].contentDocument || iframe[0].contentWindow.document
+				$(iframeDoc).on("songEnded", function() {
+					alert("hi");
+				})	
 			})
+			
 
 			that.div.animate({top:308});
 			closer.click(function() {
