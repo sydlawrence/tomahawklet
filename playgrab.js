@@ -398,14 +398,21 @@ Playgrab = {
 				color:"#ffffff"
 			}).css("font-family", "Helvetica, arial, sans-serif");
 			iframe.css({borderRight:"1px solid #f00"});
-			window.iframe = iframe;
+			//window.iframe = iframe;
 
 			iframe.load(function() {
 				var iframeDoc = iframe[0].contentDocument || iframe[0].contentWindow.document
 				$(iframeDoc).on("songEnded", function() {
 					alert("hi");
 				})	
-			})
+			});
+
+			if (iframe[0].complete) {
+				var iframeDoc = iframe[0].contentDocument || iframe[0].contentWindow.document
+				$(iframeDoc).on("songEnded", function() {
+					alert("hi");
+				})	
+			}
 			
 
 			that.div.animate({top:308});
