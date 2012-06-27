@@ -30,7 +30,7 @@ Playgrub.source.scrape = function() {
 
 		});
 	}
-	if ($(a[name='mp3TrackPlayer']).length > 0) {
+	if ($("a[name='mp3TrackPlayer']").length > 0) {
 		var album = $('#btAsinTitle').html();
 		var artist = $('.buying span a').html();
 		$('.mp3Tracks tr:not(:first-child)').each(function(){
