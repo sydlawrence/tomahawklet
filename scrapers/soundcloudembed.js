@@ -33,7 +33,6 @@ Playgrub.source.scrape = function() {
         	uri = uri.split("=");
         	uri = uri[1];
 
-        	http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F49453498
 
         	var url = uri+"?consumer_key=TiNg2DRYhBnp01DA3zNag&format=json&callback=?";
 
