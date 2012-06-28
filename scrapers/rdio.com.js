@@ -7,7 +7,7 @@
  *
  * This scraper will work on Rdio.com artist/album/playlist pages.
  */
-Playgrub.source.url = 'http://.*\.rdio.com.*';
+Playgrub.source.url = 'rdio.com.*';
 Playgrub.source.error = 'Check your Rdio page - only artist, album and playlist pages are supported.'
 Playgrub.source.scrape = function() {
 
