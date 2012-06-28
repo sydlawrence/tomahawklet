@@ -18,6 +18,14 @@ Playgrub.source.scrape = function() {
 		Playgrub.playlist.add_track(artist, title);
 
 	});
+
+	$('.mediaGrid li').each(function() {
+		var artist = $(this).find("p a").text();
+		var title = $(this).find("h5 a").text();
+
+		Playgrub.playlist.add_track(artist, title);
+
+	})
 }
 
 Playgrub.source.start();
