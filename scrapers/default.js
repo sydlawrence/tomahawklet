@@ -53,5 +53,18 @@ Playgrub.source.scrape = function () {
             }
         }
     });
+
+    $('*[itemtype="http://schema.org/MusicAlbum"]').each(function () {
+        var artist = $('[itemprop="byArtist"]').text();
+
+        $('*[itemtype="http://schema.org/MusicRecording"]').each(function () {
+            if ($(this).attr('itemprop') === "tracks") {
+                var title = $.trim($(this).find("*[itemprop='name']").text());
+                Playgrub.playlist.add_track(artist, title);
+            }
+        });
+    });
+
+
 };
 Playgrub.source.start();
