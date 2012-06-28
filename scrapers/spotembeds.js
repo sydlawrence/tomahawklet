@@ -13,7 +13,7 @@ Playgrub.source.error = 'Sorry, no tracks were found. Make sure you are on the "
 Playgrub.source.scrape = function() {
 
 
-	processPlaylist = function(data) {
+	var processPlaylist = function(data) {
 		for (var i = 0; i < data.result.length; i++) {
 			var artist = data.result[i].artist;
 			var title = data.result[i].title;

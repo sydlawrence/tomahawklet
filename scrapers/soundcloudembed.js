@@ -14,11 +14,11 @@ Playgrub.source.error = 'Sorry, no tracks were found. Make sure you are on the "
 Playgrub.source.scrape = function() {
 
 
-	processPlaylist = function(data) {
+	var processPlaylist = function(data) {
 		alert("we need to process the soundcloud playlists");
 	}
 
-	processTrack = function(track) {
+	var processTrack = function(track) {
 		var title = track.title.split(" - ");
 		
 		if (title.length === 1) {
