@@ -40,11 +40,12 @@ Playgrub.source.scrape = function() {
 
 		})
 	}
-
 	$('table.mp3Tracks tr:not(:first-child)').each(function(){
 		var title = $(this).find(".songTitle a").html();
 		var artist = $(this).find(".artist a").html();
 	})
+
+
 }
 
 Playgrub.source.start();
