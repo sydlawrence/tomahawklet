@@ -16,11 +16,19 @@ Playgrub.source.scrape = function() {
 	        var artist = $(this).find('div.uiCollapsedListMiddot span').text();
 
 	       Playgrub.playlist.add_track(artist, song);
-	    });
-	}
+    });
 
-	$('.pageMenuButton .uiButtonText').each(function(){
-				
-	})
+	$('.externalShareText .fsm').each(function() {
+		var regex = new RegExp("bandcamp.com");
+        if(regex.exec($(this).html())) {
+	        var str = $(this).parent().find('.blueItemLink').html();
+	        str = str.split(", by ");
+	        var title = str[0];
+	        var artist = str[1];
+
+	       Playgrub.playlist.add_track(artist, title);
+        }
+	});
+}
 
 Playgrub.source.start();
