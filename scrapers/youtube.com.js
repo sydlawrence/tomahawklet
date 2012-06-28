@@ -7,7 +7,7 @@
  *
  * This scraper will work on YouTube Disco and YouTube playlist pages (in "Play All" mode)
  */
-Playgrub.source.url = 'http://.*\.youtube.com.*';
+Playgrub.source.url = 'http://*youtube.com.*';
 Playgrub.source.error = 'Check your YouTube page - only YouTube Disco/playlist playback pages are supported.'
 Playgrub.source.scrape = function() { 
 

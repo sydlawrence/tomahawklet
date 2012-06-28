@@ -7,7 +7,7 @@
  *
  * This scraper will work on Turntable.fm rooms.
  */
-Playgrub.source.url = 'http://.*\.turntable.fm.*';
+Playgrub.source.url = 'http://*turntable.fm.*';
 Playgrub.source.error = 'Check your Turntable.fm page - only rooms are supported.'
 Playgrub.source.scrape = function() {
 

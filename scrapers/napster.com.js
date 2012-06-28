@@ -8,7 +8,7 @@
  *
  * This scraper will work on Napster playlist pages.
  */
-Playgrub.source.url = 'http://.*\.napster.com/playlist.htm.*';
+Playgrub.source.url = 'http://*napster.com/playlist.htm.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
 

@@ -8,7 +8,7 @@
  *
  * This scraper will work on Soundtracking song pages.
  */
-Playgrub.source.url = 'http://.*\.soundtracking.com.*';
+Playgrub.source.url = 'http://*soundtracking.com.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
 if (window.location.href.indexOf("soundtracking.com/users/") != -1) 

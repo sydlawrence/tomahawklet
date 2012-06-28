@@ -8,7 +8,7 @@
  *
  * This scraper will work on Simfy playlist pages.
  */
-Playgrub.source.url = 'http://.*\.simfy.de.*';
+Playgrub.source.url = 'http://*simfy.de.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
 

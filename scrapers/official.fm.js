@@ -7,7 +7,7 @@
  *
  * This scraper will work on Official.fm playlist pages.
  */
-Playgrub.source.url = 'http://.*\.official.fm.*';
+Playgrub.source.url = 'http://*official.fm.*';
 Playgrub.source.error = 'Check your Official.fm page - only playlist pages are supported.'
 Playgrub.source.scrape = function() {
 

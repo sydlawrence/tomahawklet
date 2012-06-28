@@ -7,7 +7,7 @@
  *
  * This scraper will work on MOG.com playlist pages.
  */
-Playgrub.source.url = 'http://.*\.mog.com.*';
+Playgrub.source.url = 'http://*mog.com.*';
 Playgrub.source.error = 'Check your MOG page - only playlist pages are supported.'
 Playgrub.source.scrape = function() {
 

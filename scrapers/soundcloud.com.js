@@ -8,7 +8,7 @@
  *
  * This scraper will work on Soundcloud track pages.
  */
-Playgrub.source.url = 'http://.*\.soundcloud.com.*';
+Playgrub.source.url = 'http://*soundcloud.com.*';
 Playgrub.source.error = 'Sorry, no tracks were found. Make sure you are on the "tracks" tab.'
 Playgrub.source.scrape = function() {
 

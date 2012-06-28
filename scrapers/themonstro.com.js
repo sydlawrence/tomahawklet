@@ -7,7 +7,7 @@
  *
  * This scraper will work on Monstro's Friends Mixes.
  */
-Playgrub.source.url = 'http://.*\.themonstro.com.*';
+Playgrub.source.url = 'http://*themonstro.com.*';
 Playgrub.source.error = 'Check your Turntable.fm page - only rooms are supported.'
 Playgrub.source.scrape = function() {
 

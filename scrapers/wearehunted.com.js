@@ -7,7 +7,7 @@
  *
  * This scraper will work on We Are Hunted playlist pages.
  */
-Playgrub.source.url = 'http://.*\.wearehunted.com/a/#/playlist/*';
+Playgrub.source.url = 'http://*wearehunted.com/a/#/playlist/*';
 Playgrub.source.error = 'Check your We Are Hunted page - only playlist pages are supported.'
 Playgrub.source.scrape = function() {
 

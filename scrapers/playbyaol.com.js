@@ -8,7 +8,7 @@
  *
  * This scraper will work on Play by AOL song pages.
  */
-Playgrub.source.url = 'http://.*\.playbyaol.com/feed/view.*';
+Playgrub.source.url = 'http://*playbyaol.com/feed/view.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
 

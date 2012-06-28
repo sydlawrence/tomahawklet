@@ -7,7 +7,7 @@
  *
  * This scraper will work on UltimateChart Songs chart.
  */
-Playgrub.source.url = 'http://.*\.ultimatechart.com.*';
+Playgrub.source.url = 'http://*ultimatechart.com.*';
 Playgrub.source.error = 'Check your This is My Jam page - only playlist pages are supported.'
 Playgrub.source.scrape = function() {
 

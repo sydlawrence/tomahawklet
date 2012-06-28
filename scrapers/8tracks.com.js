@@ -8,7 +8,7 @@
  *
  * This scraper will work on 8tracks mix pages.
  */
-Playgrub.source.url = 'http://.*\.8tracks.com.*';
+Playgrub.source.url = 'http://*8tracks.com.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
 

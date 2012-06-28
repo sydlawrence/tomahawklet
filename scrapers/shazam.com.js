@@ -8,7 +8,7 @@
  *
  * This scraper will work on Shazam Music pages.
  */
-Playgrub.source.url = 'http://.*\.shazam.com/music/web.*';
+Playgrub.source.url = 'http://*shazam.com/music/web.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
 

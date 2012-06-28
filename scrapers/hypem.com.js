@@ -8,7 +8,7 @@
  *
  * This scraper will work on Hype Machine pages.
  */
-Playgrub.source.url = 'http://.*\.hypem.com.*';
+Playgrub.source.url = 'http://*hypem.com.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
 

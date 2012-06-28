@@ -8,7 +8,7 @@
  *
  * This scraper will work on 22tracks playlist pages.
  */
-Playgrub.source.url = 'http://.*\.22tracks.com.*';
+Playgrub.source.url = 'http://*22tracks.com.*';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
 
