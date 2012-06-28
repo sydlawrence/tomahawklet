@@ -7,13 +7,22 @@
  *
  * This scraper will work on Rdio.com artist/album/playlist pages.
  */
-Playgrub.source.url = 'rdio.com.*';
+Playgrub.source.url = 'rdio.com';
 Playgrub.source.error = 'Check your Rdio page - only artist, album and playlist pages are supported.'
 Playgrub.source.scrape = function() {
 
     $('.Track').each(function(){
         var artist = $(this).find(".metadata a:nth-child(1)").html();
         var song = $(this).find(".metadata a:nth-child(2)").html();
+
+        if (artist && song) {
+            Playgrub.playlist.add_track(artist, song);
+        }  
+    });
+
+    $('.Track').each(function(){
+        var artist = $(this).find(".metadata a").html();
+        var song = $(this).find(".name a").html();
 
         if (artist && song) {
             Playgrub.playlist.add_track(artist, song);
