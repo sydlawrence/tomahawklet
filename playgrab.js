@@ -9,6 +9,7 @@ var SCRAPERS = [
 	'22tracks.com',
 	'absoluteradio.co.uk',	
 	'amazon.com',	
+	'amazon.co.uk',	
 	'apple.com',
 	'bbc.co.uk',	
 	'billboard.com',
