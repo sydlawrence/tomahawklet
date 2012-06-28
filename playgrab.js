@@ -138,6 +138,8 @@ Playgrab = {
 		creator: "",
 		tracks: [],
 		add_track: function(artist,title) {
+			artist = $.trim(artist);
+			title = $.trim(title);
 			if (artist !== undefined && title !== undefined && artist !== null && title !== null && artist !== "" && title !== "")
 				Playgrab.displayTrack(artist, title);
 		},
