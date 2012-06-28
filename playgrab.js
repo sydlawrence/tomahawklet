@@ -91,6 +91,7 @@ Playgrab = {
 
 		url = url.replace(".*.","*");
 		url = url.replace(".*\.","*");
+		url = url.replace(".*\\.", "*");
 		var regex = new RegExp(url);
         if(regex.exec(window.location.href)) {
         	console.log("true: "+url);
