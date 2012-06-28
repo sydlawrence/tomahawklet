@@ -7,7 +7,7 @@
  *
  * This scraper will work on Facebook.com music pages.
  */
-Playgrub.source.url = 'http://*facebook.com.*';
+Playgrub.source.url = 'http://*facebook.com';
 Playgrub.source.error = 'Check your Facebook page - only music pages are supported.'
 Playgrub.source.scrape = function() {
 
