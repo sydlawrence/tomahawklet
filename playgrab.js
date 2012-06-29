@@ -419,7 +419,20 @@ Playgrab = {
 		li.find('a').click(function(e) {
 			e.preventDefault();
 			$('.tomahk-iframe, .iframe-tomahk').remove();
-			var iframe = $("<iframe class='iframe-tomahk' scrolling='no' style='border:none;position:fixed;top:30px;left:0;z-index:9999999;' class='tomahk-iframe' width=278 height=278 src='http://"+domain+"/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
+			var iframe = $("<iframe class='iframe-tomahk' scrolling='no' style='border:none;position:fixed;top:30px;left:0;z-index:9999999;background:#000;opacity:0' class='tomahk-iframe' width=278 height=278 src='http://"+domain+"/embed.php?artist="+escape(artist)+"&title="+escape(title)+"&autoplay=true'></iframe>");
+			var iframeLoading = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/placeholder.png'/>");
+			iframeLoading.css({
+				position:"fixed",
+				top:30px,
+				margin:0,
+				padding:0,
+				left:0,
+				width:278,
+				height:278,
+				zIndex:9999,
+			});
+
+
 			var closer = $("<span class='tomahk-iframe'>x</span>");
 			closer.css({
 				position:"fixed",
@@ -440,6 +453,8 @@ Playgrab = {
 			//window.iframe = iframe;
 
 			iframe.load(function() {
+				iframeLoading.hide();
+				iframe.animate({opacity:1});
 				var iframeDoc = iframe[0].contentDocument || iframe[0].contentWindow.document
 				$(iframeDoc).on("songEnded", function() {
 					alert("hi");
@@ -459,7 +474,7 @@ Playgrab = {
 				$('.tomahk-iframe, .iframe-tomahk').remove();
 				that.div.animate({top:30});
 			});
-			$('body').append(iframe).append(closer);
+			$('body').append(iframe).append(closer).append(iframeLoading);
 		})
 		li.attr("title", li.attr("title").replace("<br/>", " - "));
 		return;
