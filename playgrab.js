@@ -188,7 +188,7 @@ Playgrab = {
             border:"none",
             padding:0,
             margin:0,
-            width:"auto",
+            width:20,
             display:"block",
             float:"left",
             marginRight:10,
