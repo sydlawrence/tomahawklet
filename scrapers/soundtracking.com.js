@@ -1,4 +1,3 @@
-
 /**
  * Soundtracking Tomahawklet Scraper
  * Created by: Jason Herskowitz <jherskowitz AT globallistic DOT com>
@@ -8,19 +7,18 @@
  *
  * This scraper will work on Soundtracking song pages.
  */
-Playgrub.source.url = 'http://*soundtracking.com.*';
+Playgrub.source.url = 'soundtracking.com';
 Playgrub.source.error = 'Sorry, no tracks were found.'
 Playgrub.source.scrape = function() {
-if (window.location.href.indexOf("soundtracking.com/users/") != -1) 
+if (window.location.href.indexOf("soundtracking.com/") != -1) 
 { 
-	$('div.song').each(function () {
-		var song = $(this).find('span.song-title').text();
-		var artist = $(this).find('span.artist').text();
-
+	$('div.song-zone').each(function () {
+		var song = $(this).find('p.post-title').text();
+		var artist = $(this).find('p.artist-name').text();
  	Playgrub.playlist.add_track(artist, song);
      });
 
-} else if (window.location.href.indexOf("soundtracking.com/tracks/") != -1) {
+} else if (window.location.href.indexOf("soundtracking.com/posts/") != -1) {
 
  $(".player").each(function() {
         var artist = $(this).find('p.artist').text();
