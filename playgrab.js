@@ -58,6 +58,7 @@ var SCRAPERS = [
 	'songkick.com',
 	'soundcloud.com',
 	'soundtracking.com',
+	'spotify.com',
 	'twitter.com',
 	'themonstro.com',
 	'thisismyjam.com',
