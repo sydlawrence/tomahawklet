@@ -423,7 +423,7 @@ Playgrab = {
 			var iframeLoading = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/placeholder.png'/>");
 			iframeLoading.css({
 				position:"fixed",
-				top:30px,
+				top:"30px",
 				margin:0,
 				padding:0,
 				left:0,
