@@ -19,6 +19,13 @@ var artist = $.trim(a[1]);
 
        Playgrub.playlist.add_track(artist, song);
     });
+
+$(".info").each(function() {
+        var song = $(this).find('h2').text();
+        var artist = $(this).find('h3').text();
+
+       Playgrub.playlist.add_track(artist, song);
+    });
 }
 
 Playgrub.source.start();
