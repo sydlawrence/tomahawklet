@@ -12,22 +12,24 @@ Playgrub.source.error = 'Check your Rdio page - only artist, album and playlist 
 Playgrub.source.scrape = function() {
 
     $('.Track').each(function(){
-        var artist = $(this).find(".metadata a:nth-child(1)").html();
-        var song = $(this).find(".metadata a:nth-child(2)").html();
+        var artist = $(this).find(".metadata a:nth-child(1)").text();
+        var song = $(this).find(".name").text();
 
         if (artist && song) {
             Playgrub.playlist.add_track(artist, song);
         }  
     });
-
+/*
     $('.Track').each(function(){
-        var artist = $(this).find(".metadata a").html();
-        var song = $(this).find(".name a").html();
+        var artist = $(this).find(".metadata").text();
+        var song = $(this).find(".name").text();
 
         if (artist && song) {
             Playgrub.playlist.add_track(artist, song);
         }  
     });
+*/
+
 
     
 }
