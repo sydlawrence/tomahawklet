@@ -431,7 +431,7 @@ Playgrab = {
 				height:278,
 				zIndex:9999,
 			});
-			var iframeLoadingImage = $("<img src='https://github.com/tomahawk-player/tomahawk/raw/master/data/images/loading.gif'/>");
+			var iframeLoadingImage = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/loading.gif'/>");
 			iframeLoadingImage.css({
 				position:"fixed",
 				top:154,
