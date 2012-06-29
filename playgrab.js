@@ -373,6 +373,7 @@ Playgrab = {
 		img.css({opacity:0});
 
 		li.append(placeholder);
+		li.css({margin:0,padding:0});
 
 		img.on("load", function() {
 			img.animate({opacity:1}, 500);

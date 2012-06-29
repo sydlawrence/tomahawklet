@@ -40,7 +40,7 @@ Playgrub.source.scrape = function () {
             }
         }
     });
-    $('*[itemtype="http://schema.org/MusicRecording"]').each(function () {
+    $('*[itemtype="http://schema.org/MusicRecording"], *[itemtype="http://www.schema.org/MusicRecording"]').each(function () {
         if ($(this).attr('itemprop') === "tracks") {
             var track = {};
             track.title = $.trim($(this).find("*[itemprop='name']").text());
