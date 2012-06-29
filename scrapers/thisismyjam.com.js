@@ -21,7 +21,7 @@ Playgrub.source.scrape = function() {
 
     $(".currentJam").each(function() {
     	var str = $(this).text();
-    	str = str.split(" by ","");
+    	str = str.split(" by ");
 		var title = str[0];
 		var artist = str[1];
 		Playgrub.playlist.add_track(artist, title);
