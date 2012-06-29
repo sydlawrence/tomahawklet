@@ -431,6 +431,19 @@ Playgrab = {
 				height:278,
 				zIndex:9999,
 			});
+			var iframeLoadingImage = $("<img src='https://github.com/tomahawk-player/tomahawk/raw/master/data/images/loading.gif'/>");
+			iframeLoadingImage.css({
+				position:"fixed",
+				top:154,
+				margin:0,
+				padding:0,
+				left:124,
+				width:31,
+				height:31,
+				
+				zIndex:99991,
+			});
+
 
 
 			var closer = $("<span class='tomahk-iframe'>x</span>");
@@ -454,6 +467,7 @@ Playgrab = {
 
 			iframe.load(function() {
 				iframeLoading.hide();
+				iframeLoadingImage.hide();
 				iframe.animate({opacity:1});
 				var iframeDoc = iframe[0].contentDocument || iframe[0].contentWindow.document
 				$(iframeDoc).on("songEnded", function() {
@@ -474,7 +488,7 @@ Playgrab = {
 				$('.tomahk-iframe, .iframe-tomahk').remove();
 				that.div.animate({top:30});
 			});
-			$('body').append(iframe).append(closer).append(iframeLoading);
+			$('body').append(iframe).append(closer).append(iframeLoading).append(iframeLoadingImage);
 		})
 		li.attr("title", li.attr("title").replace("<br/>", " - "));
 		return;
