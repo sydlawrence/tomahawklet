@@ -16,7 +16,14 @@ Playgrub.source.scrape = function() {
 		var artist = $.trim($(this).find('#jamArtist').text());
 
 		artist = artist.replace("by","");
-		console.log(artist);
+		Playgrub.playlist.add_track(artist, title);
+    });
+
+    $(".currentJam").each(function() {
+    	var str = $(this).text();
+    	str = str.split(" by ","");
+		var title = str[0];
+		var artist = str[1];
 		Playgrub.playlist.add_track(artist, title);
     });
 }
