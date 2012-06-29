@@ -185,6 +185,10 @@ Playgrab = {
 		var logo = $("<img src='https://github.com/sydlawrence/tomahawklet/raw/master/tomahk_logo.png'/>");
 		logo.css({
             height:20,
+            border:none,
+            padding:0,
+            margin:0,
+            width:auto,
             display:"block",
             float:"left",
             marginRight:10,
