@@ -7,7 +7,7 @@
  *
  * This scraper will work on Rhapsody.com playlist pages.
  */
-Playgrub.source.url = 'http://*thisismyjam.com.*';
+Playgrub.source.url = 'thisismyjam.com';
 Playgrub.source.error = 'Check your This is My Jam page - only playlist pages are supported.'
 Playgrub.source.scrape = function() {
 
