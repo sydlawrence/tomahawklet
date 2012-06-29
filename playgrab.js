@@ -493,17 +493,17 @@ var Playgrub = Playgrab;
 var script = document.createElement('script');
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-script.src = 'http://toma.hk/js/classes/Artist.js';
+script.src = 'http://'+domain+'/js/classes/Artist.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-script.src = 'http://toma.hk/js/classes/Track.js';
+script.src = 'http://'+domain+'/js/classes/Track.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-script.src = 'http://toma.hk/js/classes/Album.js';
+script.src = 'http://'+domain+'/js/classes/Album.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
@@ -515,7 +515,7 @@ script.onload = function() {
 		var script = document.createElement('script');
 		script.type = 'text/javascript';
 		document.getElementsByTagName('head')[0].appendChild(script);
-		script.src = 'http://toma.hk/js/bootstrap/bootstrap-tooltip.js';
+		script.src = 'http://'+domain+'/js/bootstrap/bootstrap-tooltip.js';
 		script.onload = function() {
 			$('li.cover').tooltip();
 		}
