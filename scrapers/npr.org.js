@@ -15,12 +15,22 @@ Playgrub.source.url = 'npr.org';
 Playgrub.source.error = 'This is the npr issue';
 Playgrub.source.scrape = function() {
 
+	function strip(html)
+	{
+	   var tmp = document.createElement("DIV");
+	   tmp.innerHTML = html;
+	   return tmp.textContent||tmp.innerText;
+	}
 
     $('.playlistwrap tr:not(.tableHeader)').each(function(){
         var title = $(this).find(".song").html();
         var artist = $(this).find(".artist").html();
-        console.log(artist + " :- "+title);
-			Playgrub.playlist.add_track(artist,title);
+		Playgrub.playlist.add_track(artist,title);
+    });
+    $('.playlistitem').each(function() {
+    	var title = strip($(this).find('.info li:nth-child(2)').html());
+        title = title.replace("Song: ");
+    	var artist = $(this).find(".bucketblock h4").text();
 
     })
 }
