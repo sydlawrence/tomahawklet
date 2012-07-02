@@ -22,6 +22,15 @@ if (window.location.href.indexOf("pitchfork.com/reviews/tracks") != -1) {
                                artist = artist.replace(':', '');
         Playgrub.playlist.add_track(artist, song);
     });
+
+    $('.review-meta .info').each(function() {
+      var title = $(this).find("h2").text();
+      title = title.replace('"', '');
+      title = title.replace('"', '');
+
+      var artist = $(this).find('h1 a').html();
+        Playgrub.playlist.add_track(artist, title);
+    })
     
 } else if (window.location.href.indexOf("pitchfork.com/reviews/best/tracks") != -1) {
     $("li").each(function () {
