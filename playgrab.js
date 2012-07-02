@@ -72,7 +72,7 @@ var SCRAPERS = [
 	'youtube.com'
 ];
 
-var domain = "stage.toma.hk";
+var domain = "toma.hk";
 
 
 var Playgrab;
