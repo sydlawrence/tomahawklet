@@ -80,6 +80,9 @@ var Playgrab;
 
 
 var getAlbumInfo = function(artist, title, callback) {
+	artist = encodeURIComponent(artist);
+	title = encodeURIComponent(title);
+
 	var url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=b25b959554ed76058ac220b7b2e0a026&artist="+artist+"&album="+title+"&format=json";
 	$.getJSON(url,callback);
 }
