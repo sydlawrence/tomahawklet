@@ -44,15 +44,22 @@ Playgrub.source.scrape = function () {
             // is an album
             regex = new RegExp("toma.hk/album/");            
             if (regex.exec(src)) {
-                console.log("abum");
                 src = src.split("/");
                 var artist = src[4]; 
                 var album = src[5];
+                album = album.replace("?embed=true", "");
                 artist = urldecode(artist);
                 album = urldecode(album);
 
+
                 getAlbumInfo(artist, album, function(data) {
                     console.log(data);
+                    for (var i = 0; i < data.album.tracks.track.length; i++) {
+                        var track = data.album.tracks.track[i];
+                        var title = track.name;
+                        var artist = track.artist.name;
+                        Playgrub.playlist.add_track(artist, title);
+                    }
                 })
 
             }
