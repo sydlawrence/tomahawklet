@@ -25,6 +25,10 @@ Playgrub.source.url = '.*';
 Playgrub.source.error = 'Sorry, no suitable haudio tags could be found on this page';
 Playgrub.source.scrape = function () {
 
+    var urldecode = function(str) {
+       return decodeURIComponent((str+'').replace(/\+/g, '%20'));
+    }
+
     $('iframe').each(function() {
         var src = $(this).attr("src");
 
@@ -42,12 +46,17 @@ Playgrub.source.scrape = function () {
             if (regex.exec(src)) {
                 console.log("abum");
                 src = src.split("/");
-                console.log(src);
+                var artist = src[4]; 
+                var album = src[5];
+                artist = urldecode(artist);
+                album = urldecode(album);
+
+                getAlbumInfo(artist, album, function(data) {
+                    console.log(data);
+                })
+
             }
-
         }
-
-
     });
 
 
