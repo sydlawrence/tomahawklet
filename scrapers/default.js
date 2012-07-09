@@ -24,6 +24,35 @@
 Playgrub.source.url = '.*';
 Playgrub.source.error = 'Sorry, no suitable haudio tags could be found on this page';
 Playgrub.source.scrape = function () {
+
+    $('iframe').each(function() {
+        var src = $(this).attr("src");
+
+        var regex = new RegExp("toma.hk");
+        if(regex.exec(src)) {
+            // is a playlist
+            regex = new RegExp("toma.hk/p/");            
+            if (regex.exec(src)) {
+                src = src.split("/");
+                console.log("playlist");
+                console.log(src);
+            }
+            // is an album
+            regex = new RegExp("toma.hk/album/");            
+            if (regex.exec(src)) {
+                console.log("abum");
+                src = src.split("/");
+                console.log(src);
+            }
+
+        }
+
+
+    });
+
+
+
+
     $(".haudio").each(function () {
         var item = $(this).find('.item');
         if (item.length > 0) {
