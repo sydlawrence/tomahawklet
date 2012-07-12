@@ -51,8 +51,8 @@ var SCRAPERS = [
 	'playlistify.org',
 	'rdio.com',
 	'rhapsody.com',
-
 	'sharemyplaylists.com',
+	'shuffler.fm',
 	'simfy.de',
 	'shazam.com',
 	'songkick.com',
