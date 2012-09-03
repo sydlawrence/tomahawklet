@@ -147,7 +147,7 @@ Playgrab = {
 		}
 	},
 	addScraper: function(domain) {
-		var link = "<scrip"+"t src='https://raw.github.com/Dani21/tomahawklet/master/scrapers/"+domain+".js'><"+"/script>";
+		var link = "<scrip"+"t src='https://raw.github.com/Dani21/tomahawklet/patch-1/scrapers/"+domain+".js'><"+"/script>";
 		$('body').append(link);
 	},
 	playlist: {
