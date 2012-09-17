@@ -45,6 +45,7 @@ var SCRAPERS = [
 	'npr.org',
 	'official.fm',
 	'pandora.com',
+	'peel.wikia.com',
 	'pitchfork.com',
 	'playbyaol.com',
 	'playlick.com',
