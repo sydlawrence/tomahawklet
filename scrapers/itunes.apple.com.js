@@ -7,7 +7,7 @@
 *
 * This scraper will work on itunes.apple.com Song, Music Artist, and Playlist pages.
 */
-Playgrub.source.url = 'http://itunes\.apple\.com/(album|playlist|artist)/.*';
+Playgrub.source.url = 'https?://itunes\.apple\.com.*(album|playlist|artist)/.*';
 Playgrub.source.error = 'Tomahawk currently supports iTunes song, playlist, and artist pages.'
 Playgrub.source.scrape = function() {
 	var source=$('.track-list .music.song');
