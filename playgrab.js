@@ -22,6 +22,7 @@ var SCRAPERS = [
 	'fiql.com',
 	'grooveshark.com',
 	'hypem.com',
+	'itunes.apple.com',
 	'kerrangradio.co.uk',
 	'last.fm',
 	'lastfm.com.br',
@@ -147,7 +148,7 @@ Playgrab = {
 		}
 	},
 	addScraper: function(domain) {
-		var link = "<scrip"+"t src='https://raw.github.com/sydlawrence/tomahawklet/master/scrapers/"+domain+".js'><"+"/script>";
+		var link = "<scrip"+"t src='https://raw.github.com/Dani21/tomahawklet/patch-1/scrapers/"+domain+".js'><"+"/script>";
 		$('body').append(link);
 	},
 	playlist: {
