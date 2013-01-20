@@ -22,6 +22,7 @@ var SCRAPERS = [
 	'fiql.com',
 	'grooveshark.com',
 	'hypem.com',
+	'itunes.apple.com',
 	'kerrangradio.co.uk',
 	'last.fm',
 	'lastfm.com.br',
