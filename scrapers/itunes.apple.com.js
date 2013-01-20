@@ -15,7 +15,7 @@ Playgrub.source.scrape = function() {
 		var artist=$(this).attr('preview-artist');
 		var song=$(this).attr('preview-title');
 		if(artist && song);
-			Playgrab.add_track(artist,song);
+			Playgrab.playlist.add_track(artist,song);
 	});
 }
 
