@@ -14,6 +14,7 @@ Playgrub.source.scrape = function() {
 	$.each(source, function(){
 		var artist=$(this).attr('preview-artist');
 		var song=$(this).attr('preview-title');
+		console.log('Adding '+artist+' - '+song);
 		if(artist && song);
 			Playgrab.insertAddButton($(this),artist,song);
 	});
